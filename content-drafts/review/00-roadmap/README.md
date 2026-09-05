@@ -29,6 +29,7 @@ All branches target **molnard/GingerDoc:master**, starting at `b48dfd161434bdfad
 - [Existing documentation gaps and Ginger-specific additions](gaps-and-differences.md)
 - [Wasabi coverage, exclusions, and source locators](wasabi-coverage.md)
 - [Top three educational topics and SEO research](audience-and-seo.md)
+- [Further topics from talks, articles, and publications](additional-topics.md)
 - [Authoring and future localization](authoring-and-localization.md)
 - [Engine/search decision and publication checks](integration.md)
 - [Validation results and limits](validation.md)
