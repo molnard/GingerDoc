@@ -2,9 +2,9 @@
 
 Research date: **2026-09-05**. Audience: Ginger users and documentation reviewers. Application baseline: [Ginger v2.0.26](https://github.com/GingerPrivacy/GingerWallet/releases/tag/v2.0.26), published 2026-07-31; release commit `fa27e5419da5dfa391fb1db38012c0b1141f59b3`.
 
-The strongest next additions are **an exchange-to-cold-storage walkthrough, worked examples of spending after CoinJoin, and a guide to changing wallet applications without exposing more history**. The existing 30 manuscripts explain most individual operations. Their main remaining gap is connecting those operations into decisions people face with their own money.
+The strongest next additions are **an exchange-to-cold-storage walkthrough, worked examples of spending after CoinJoin, and a guide to changing wallet applications without exposing more history**. The original 30 manuscripts explained most individual operations. Their main remaining gap was connecting those operations into decisions people face with their own money.
 
-This review recommends **six new pages and four expansions**, described below. They are article briefs, not ten completed manuscripts. The existing page registry still describes 30 reading drafts. The ranking is an editorial assessment of practical value, coverage gaps and released Ginger support; it is not a measured ranking of search volume or conversion potential.
+The research recommended **six new pages and four expansions**, described below. All ten have now been developed into complete English reading drafts in their topic PRs. The updated registry contains 36 pages; the four expansions occupy three existing pages because fees and progress share one chapter. See the [implementation record](topic-expansion.md) for the final mapping and additional release findings. The briefs below preserve the research rationale. The ranking is an editorial assessment of practical value, coverage gaps and released Ginger support; it is not a measured ranking of search volume or conversion potential.
 
 ## Priority and review homes
 
@@ -21,7 +21,7 @@ This review recommends **six new pages and four expansions**, described below. T
 | 9 | Receiving Donations and Repeated Payments | New scenario guide | [Privacy, PR #10](https://github.com/molnard/GingerDoc/pull/10) |
 | 10 | An Address, an Xpub, or Recovery Words Leaked: What Changes? | Expand security routine | [Self-custody, PR #12](https://github.com/molnard/GingerDoc/pull/12) |
 
-Review homes describe the subject owners, not dependencies between open PRs. If a subject PR merges before its follow-up is written, create a small follow-up PR against the updated fork. Keep the first three walkthroughs separately reviewable. The publication engine remains undecided; all proposed content can remain ordinary English Markdown.
+Review homes describe the subject owners, not dependencies between open PRs. The completed manuscripts remain separate files in those existing subject PRs. The publication engine remains undecided; all content remains ordinary English Markdown.
 
 ## 1. From an Exchange to Cold Storage with Ginger
 
@@ -33,7 +33,7 @@ Review homes describe the subject owners, not dependencies between open PRs. If 
 
 Molnard's HUSZONEGY discussion directly addresses this workflow, including the distinction between a hardware wallet receiving outputs and supplying CoinJoin inputs. The published transcript is useful source material; its conversational claims need the release checks below. [HUSZONEGY E109, with Dávid, 2026-06-05](https://huszonegy.world/podcast/igy-lesz-privat-a-bitcoinod-ginger-wallet-coinjoin/)
 
-**Ginger boundary:** the source must be an eligible software wallet; the hardware wallet can be the destination. Recheck the output wallet after restart. Do not promise a completion time, permanent automation, a specific number of rounds, or the disappearance of the exchange's original withdrawal record. Do not import the hardware seed into the desktop wallet to enable CoinJoin.
+**Ginger boundary:** the source must be an eligible software wallet; the hardware wallet can be the destination. A later source check found that normal v2.0.26 startup rejects an all-private wallet or private-only candidates. Excluding non-private coins does not establish a supported way to force an extra forwarding round. Direct destination selection also does not wait for a separate target-achievement event. Recheck the output wallet after restart. Do not promise a completion time, permanent automation, a specific number of rounds, or the disappearance of the exchange's original withdrawal record. Do not import the hardware seed into the desktop wallet to enable CoinJoin.
 
 Suggested ID: `hardware-wallets.exchange-to-cold-storage`. Natural search intent: “Ginger CoinJoin to hardware wallet”, “Bitcoin exchange to cold storage privacy”.
 
@@ -172,13 +172,13 @@ These sources converge on useful questions while differing in claims about attac
 | Finding from v2.0.26 | Consequence for the proposed content |
 | --- | --- |
 | [CoinJoin source eligibility](https://github.com/GingerPrivacy/GingerWallet/blob/fa27e5419da5dfa391fb1db38012c0b1141f59b3/WalletWasabi/Wallets/Wallet.cs#L132) and [loaded output-wallet selection](https://github.com/GingerPrivacy/GingerWallet/blob/fa27e5419da5dfa391fb1db38012c0b1141f59b3/WalletWasabi.Fluent/HomeScreen/WalletSettings/ViewModels/WalletCoinJoinSettingsViewModel.cs#L221) are different checks | Receiving on hardware is not CoinJoining hardware-held inputs |
-| [Output-wallet choice resets during initialization](https://github.com/GingerPrivacy/GingerWallet/blob/fa27e5419da5dfa391fb1db38012c0b1141f59b3/WalletWasabi.Fluent/Models/Wallets/WalletSettingsModel.cs#L127) | Include a restart checkpoint in recurring and cold-storage workflows |
+| [Output-wallet choice resets during initialization](https://github.com/GingerPrivacy/GingerWallet/blob/fa27e5419da5dfa391fb1db38012c0b1141f59b3/WalletWasabi.Fluent/Models/Wallets/WalletSettingsModel.cs#L72) | Include a restart checkpoint in recurring and cold-storage workflows |
 | [Local wallet filter matching](https://github.com/GingerPrivacy/GingerWallet/blob/fa27e5419da5dfa391fb1db38012c0b1141f59b3/WalletWasabi/Wallets/WalletFilterProcessor.cs#L216) | Explain this protection without generalizing it to every network feature |
 | [Privacy percentage calculation](https://github.com/GingerPrivacy/GingerWallet/blob/fa27e5419da5dfa391fb1db38012c0b1141f59b3/WalletWasabi/Wallets/Wallet.cs#L240) is wallet-side accounting | A progress number is not a measurement of an outside observer's knowledge |
 | [PayJoin negotiation can fall back](https://github.com/GingerPrivacy/GingerWallet/blob/fa27e5419da5dfa391fb1db38012c0b1141f59b3/WalletWasabi.Fluent/HomeScreen/Send/ViewModels/TransactionPreviewViewModel.cs#L522) and [hardware sending is restricted](https://github.com/GingerPrivacy/GingerWallet/blob/fa27e5419da5dfa391fb1db38012c0b1141f59b3/WalletWasabi.Fluent/HomeScreen/Send/ViewModels/SendViewModel.cs#L266) | Preserve these limits in every PayJoin explanation |
 | [Coin selection includes cost estimates](https://github.com/GingerPrivacy/GingerWallet/blob/fa27e5419da5dfa391fb1db38012c0b1141f59b3/WalletWasabi/WabiSabi/Client/CoinJoin/Client/CoinJoinCoinSelector.cs#L69) | Explain actual reconciliation rather than treating a selection estimate as a guaranteed maximum charge |
 
-This is source inspection, not an executed wallet experiment or security audit. No actual payment, CoinJoin, third-party order, recovery exercise or physical-device test was performed for this addendum. Operational drafts still need exact UI-label checks against the release when written.
+This is source inspection, not an executed wallet experiment or security audit. No actual payment, CoinJoin, third-party order, recovery exercise or physical-device test was performed for this addendum. The completed operational drafts now include exact UI-label checks and additional pinned behavior evidence in their topic review records. Application and physical-device walkthroughs remain publication checks.
 
 ## Editorial and SEO implications
 

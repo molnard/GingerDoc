@@ -1,6 +1,6 @@
 # Editorial foundation: English Ginger user manual
 
-This batch provides 30 complete English Markdown manuscripts in 11 independently reviewable subject PRs, plus this foundation PR. It expands the sparse existing documentation using Wasabi's user-facing topics as a research inventory and Ginger's released behavior as the feature boundary.
+This batch provides 36 complete English Markdown manuscripts in 11 independently reviewable subject PRs, plus this foundation PR. It expands the sparse existing documentation using Wasabi's user-facing topics as a research inventory and Ginger's released behavior as the feature boundary.
 
 Application baseline: **v2.0.26**, published 2026-07-31, commit `fa27e5419da5dfa391fb1db38012c0b1141f59b3`. Wasabi documentation inventory: `6d1a5730824e7757e2d3a57bcbbafae8c0a25c8c`. Research and source review date: **2026-09-05**. The 44 Wasabi pages contain 676 headings/subquestions; the inventory preserves a source-line locator for every one, including excluded material.
 
@@ -15,11 +15,11 @@ All branches target **molnard/GingerDoc:master**, starting at `b48dfd161434bdfad
 | 02 | Backups, recovery, passphrases, and 2FA |
 | 03 | CoinJoin operation, settings, fees, progress, and output wallets |
 | 04 | Receive/send, fees/change, coin control, history, acceleration/cancellation, PayJoin, message signing |
-| 05 | Hardware wallets and PSBT |
+| 05 | Hardware wallets, PSBT, and exchange-to-cold-storage walkthrough |
 | 06 | Tor/sync, own node, fee providers, appearance/languages, and Secret Hunt |
 | 07 | Buy/sell and provider-order support |
 | 08 | Troubleshooting, FAQ, and glossary |
-| 09 | Bitcoin privacy education |
+| 09 | Bitcoin privacy, spending examples, wallet migration, information sharing, and repeated receipts |
 | 10 | CoinJoin education and decision-making |
 | 11 | Self-custody education and recoverable security |
 
@@ -29,7 +29,8 @@ All branches target **molnard/GingerDoc:master**, starting at `b48dfd161434bdfad
 - [Existing documentation gaps and Ginger-specific additions](gaps-and-differences.md)
 - [Wasabi coverage, exclusions, and source locators](wasabi-coverage.md)
 - [Top three educational topics and SEO research](audience-and-seo.md)
-- [Further topics from talks, articles, and publications](additional-topics.md)
+- [Research from talks, articles, and publications](additional-topics.md)
+- [Implementation of all ten research topics](topic-expansion.md)
 - [Authoring and future localization](authoring-and-localization.md)
 - [Engine/search decision and publication checks](integration.md)
 - [Validation results and limits](validation.md)
