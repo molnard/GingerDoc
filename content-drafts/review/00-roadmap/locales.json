@@ -1,0 +1,56 @@
+[
+  {
+    "app_locale": "en-US",
+    "draft_directory": "en",
+    "language": "English",
+    "status": "english-review"
+  },
+  {
+    "app_locale": "es-ES",
+    "draft_directory": "es",
+    "language": "Spanish",
+    "status": "planned-after-english-merge"
+  },
+  {
+    "app_locale": "hu-HU",
+    "draft_directory": "hu",
+    "language": "Hungarian",
+    "status": "planned-after-english-merge"
+  },
+  {
+    "app_locale": "fr-FR",
+    "draft_directory": "fr",
+    "language": "French",
+    "status": "planned-after-english-merge"
+  },
+  {
+    "app_locale": "zh-SG",
+    "draft_directory": "zh",
+    "language": "Chinese",
+    "status": "planned-after-english-merge"
+  },
+  {
+    "app_locale": "de-DE",
+    "draft_directory": "de",
+    "language": "German",
+    "status": "planned-after-english-merge"
+  },
+  {
+    "app_locale": "pt-PT",
+    "draft_directory": "pt",
+    "language": "Portuguese",
+    "status": "planned-after-english-merge"
+  },
+  {
+    "app_locale": "tr-TR",
+    "draft_directory": "tr",
+    "language": "Turkish",
+    "status": "planned-after-english-merge"
+  },
+  {
+    "app_locale": "it-IT",
+    "draft_directory": "it",
+    "language": "Italian",
+    "status": "planned-after-english-merge"
+  }
+]
