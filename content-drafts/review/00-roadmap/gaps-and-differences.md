@@ -22,7 +22,7 @@ The repository baseline has a minimal home page, a VuePress sample page, short t
 
 ## Ginger-specific or materially different behavior
 
-These are additions or differences relative to the reviewed Wasabi documentation. They are not a claim that no other wallet has similar features.
+These are verified Ginger release boundaries and corrections relevant to this manual. They describe the released user workflow.
 
 | Finding | Documentation consequence | Released evidence |
 | --- | --- | --- |
@@ -37,8 +37,8 @@ These are additions or differences relative to the reviewed Wasabi documentation
 | Buy/sell connects to providers in a separate browser | Explain identity/payment data and support responsibilities | Topic 07 review |
 | Sell continuation does not supply address/amount automatically | Correct old documentation; user must enter or verify the provider request | Topic 07 review |
 | Bundled Bitcoin Core 31, HWI 3.2.0, native Mac ARM components | Use current release names and assets; do not perpetuate Knots names from resource keys | Topics 01, 05 and 06 reviews |
-| GUI offers Main and RegTest | Do not import public-testnet setup instructions from Wasabi | Topic 06 review |
-| Normal receiving creates SegWit; optional Taproot action | Do not describe Wasabi's newer receiving default as Ginger's default | Topic 04 review |
+| GUI offers Main and RegTest | Describe only the released network choices | Topic 06 review |
+| Normal receiving creates SegWit; optional Taproot action | Use Ginger's released receiving default and offered action | Topic 04 review |
 | PayJoin may fall back; onion endpoints are rejected with Tor enabled | State actual release limits explicitly | Topic 04 review |
 | Onboarding text suggests automatic CoinJoin but wallet default is false | Tell users to inspect their actual switch; no unconditional default-start promise | Topics 01 and 03 reviews |
 

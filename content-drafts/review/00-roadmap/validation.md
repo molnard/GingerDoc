@@ -4,20 +4,24 @@ Checked on 2026-09-05 against the v2.0.26 source baseline. This is validation of
 
 | Check | Result |
 | --- | --- |
-| Complete English reader pages | 36 |
-| Approximate reader word count, including headings/tables | 27,217 |
+| Complete English reader pages | 42 |
+| Approximate reader word count, including headings/tables | 31,794 |
 | Stable IDs, required frontmatter, one H1 matching title | Pass |
 | English-only locale and released-version metadata | Pass |
 | Relative links resolve; reader links remain inside their own topic PR | Pass |
 | Exact English UI labels checked against resources or literal view/enum definitions | Pass |
-| Ginger source links pinned to the release; paths and line anchors checked | 324 references validated |
-| Wasabi headings/subquestions assigned a disposition | 676 across 44 source pages |
+| Ginger source links pinned to the release; paths and line anchors checked | 346 references validated |
+| Reference headings/subquestions assigned a disposition | 676 across 44 source pages |
 | Screenshots, embedded scripts, framework components in reader pages | None |
 | Markdown lint | Pass, markdownlint-cli2 0.23.2 / markdownlint 0.41.1 |
 | Original public non-snapshot reference check | 24 checked; HTTP 200 in the original batch |
 | Expansion references | Primary reader references opened during source review; research access limits recorded in the addendum |
 | Research expansion coverage | All ten proposals developed: six new pages and four expansions in three existing pages |
-| Registry and numerical examples | 36 unique IDs with valid related-page targets; spending, fee and score examples reconciled |
+| Registry and numerical examples | 42 unique IDs with valid related-page targets; spending, fee and score examples reconciled |
+| Beginner/advanced revision | 42 visible reading levels; 34 basic and 25 advanced FAQ answers |
+| Historical question coverage | All 25 families mapped; dated sample from 2019-09-05 through 2026-09-05 |
+| Reader branding | No unrelated wallet-brand name in reader files |
+| FAQ navigation | Question anchors and intended follow-up page IDs checked |
 | Released PGP public-key fingerprint | Matches FA0B017A3E75CE65CBF7838FA8FF3767EDF5DCE9 |
 | Released SHA256SUMS.asc signature | Valid under the checked release key |
 

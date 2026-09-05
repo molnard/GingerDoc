@@ -2,7 +2,7 @@
 
 Research date: **2026-09-05**. The priorities below are an editorial ranking of three useful entry topics, based on public reader questions, fit with released Ginger capabilities, and the ability to answer responsibly. They are **not a measured global top three by search volume**. No Search Console, paid keyword-volume dataset, conversion analytics, or private customer data was available.
 
-Searches included Bitcoin CoinJoin privacy/fees questions, seed/passphrase backup questions, and Ginger Wallet mentions. The Wasabi question inventory supplies breadth; public discussions supply evidence that people ask these questions. Community answers are not treated as technical authority. Release code, protocol documents, and official project material support the actual guides.
+Searches included Bitcoin CoinJoin privacy/fees questions, seed/passphrase backup questions, and Ginger Wallet mentions. The reference-topic inventory supplies breadth; public discussions supply evidence that people ask these questions. Community answers are not treated as technical authority. Release code, protocol documents, and official project material support the actual guides.
 
 ## 1. Who Can See My Bitcoin Transactions?
 

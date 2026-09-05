@@ -1,12 +1,12 @@
 # Authoring contract and future localization
 
-Write for a person using a released desktop wallet. Explain the task, prerequisites, exact action, expected result, and the relevant recovery or privacy limit. Prefer ordinary Markdown paragraphs, headings, numbered steps, and compact tables. Use no screenshots, framework components, embedded tracking, or UI text guessed from Wasabi.
+Write for a person using a released desktop wallet. Explain the task, prerequisites, exact action, expected result, and the relevant recovery or privacy limit. Prefer ordinary Markdown paragraphs, headings, numbered steps, and compact tables. Use no screenshots, framework components, embedded tracking, or UI text guessed from another application.
 
 ## Stable content format
 
-Manuscripts live at `content-drafts/en/<topic>/<slug>.md`. Each has frontmatter with `doc_id`, `title`, `description`, `lang`, and `verified_release`. IDs such as `backup-recovery.restore` survive route and engine changes. They are not public URLs. Keep one H1 matching the title. Technical source evidence lives in the review folder and stays outside public reader navigation.
+Manuscripts live at `content-drafts/en/<topic>/<slug>.md`. Each has frontmatter with `doc_id`, `title`, `description`, `lang`, `verified_release`, and `reader_level`. IDs such as `backup-recovery.restore` survive route and engine changes. They are not public URLs. Keep one H1 matching the title. Technical source evidence lives in the review folder and stays outside public reader navigation.
 
-The checked release's English resources provide button/menu spelling. Check the corresponding view and view model as well, because a resource string can exist for a hidden or unavailable action. Record material differences from current marketing or Wasabi behavior. A merged development commit alone does not qualify a feature as released.
+The checked release's English resources provide button/menu spelling. Check the corresponding view and view model as well, because a resource string can exist for a hidden or unavailable action. Record material discrepancies with other sources in the review evidence. A merged development commit alone does not qualify a feature as released.
 
 Use local links only when the destination ships in the same topic PR. Cross-topic journeys use page IDs in the editorial registry until integration. Do not publish a link that points to an unmerged manuscript.
 
@@ -35,3 +35,13 @@ The notice is editorial wording for owner review, not a claim of universal legal
 ## Release maintenance
 
 For a new stable release, inspect changes to UI resources, available actions, backup formats, 2FA, fee handling, node/HWI versions, provider flows, and privacy-related behavior. Update the release baseline per page after checking the relevant source and workflow. Keep provider limits and live coordinator policies explicitly time-dependent rather than freezing them as permanent product capabilities.
+
+## Reading-level contract
+
+Every reader page has `reader_level: beginner`, `everyday` or `advanced` and a visible reading-level sentence. Use Start here as the public beginner label; ELI5 describes the editorial goal, not a label that talks down to the reader. A beginner page gives a short explanation and one ordinary path. File internals, formulas, protocol phases and custom account recovery belong on separate advanced pages.
+
+Beginner safety information is never deferred: record the words and original passphrase, verify the payment address and network, review the actual fee, and explain that confirmed payments cannot be reversed. An Advanced label does not mean backups or download authenticity are optional.
+
+Write FAQ questions in the words a user would search. Answer immediately in a few sentences and give the next safe check. Keep old-version forum advice in the research record, not the answer. Do not introduce other wallet brands, comparisons or developer implementation details into ordinary Ginger instructions or PR descriptions. Accurate original source titles, source URLs and code identifiers may remain in editorial provenance; never rename a real source to disguise its origin.
+
+Translate the reading-level labels, FAQ question headings and search synonyms with the future locale work. Preserve the same separation and release checks in every language.

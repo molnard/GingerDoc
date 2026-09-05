@@ -4,7 +4,7 @@ The engine decision remains with Norbi and the owner. These files are portable M
 
 ## Search problem to solve
 
-The existing repository imports VuePress's search plugin. The Wasabi discussion [Search in content, issue 1612](https://github.com/WalletWasabi/WasabiDoc/issues/1612) identifies the limitation: searching titles misses relevant body text. Previous external-index experiments should be examined when making the engine decision, including the stale-index and broken-result-link regressions discussed in that repository.
+The existing repository imports VuePress's search plugin. The earlier [Search in content discussion, issue 1612](https://github.com/WalletWasabi/WasabiDoc/issues/1612) identifies the limitation: searching titles misses relevant body text. Previous external-index experiments should be examined when making the engine decision, including the stale-index and broken-result-link regressions discussed in that repository.
 
 Astro Starlight with Pagefind remains a candidate, not a committed implementation. A maintained VuePress setup with working local full-text indexing could also satisfy the requirement. Choose based on a proof with this actual content, not only a demonstration site. Compare maintenance burden, locale support, URLs, hosting, accessibility, and data exposure.
 
@@ -31,3 +31,11 @@ Pin supported runtime/dependency versions and a lockfile; make local build and C
 7. After English approval and merges, create translation PRs for the remaining selectable application languages with source-commit tracking and visible review status.
 
 Nothing in this content batch publishes the drafts or merges the owner's PRs. Engine testing and real device/application walkthroughs remain explicit publication work, not checks claimed by the Markdown-only PRs.
+
+## Beginner and advanced navigation acceptance criteria
+
+Use `navigation.json` as the engine-independent reading-path contract. Start here is the initial entrance, while Advanced use is a separate navigation group. Show each page's `reader_level` in its header and search-result preview. Do not send a beginner through formulas, protocol phases or configuration files as the next automatic step.
+
+For broad searches such as `missing money`, `forgot password`, `coinjoin not starting`, `free coinjoin`, `pending payment` and `cancel payment`, make the relevant short FAQ answer easy to identify. Label advanced results and offer a reading-level filter without hiding exact matches. Retain full-body indexing and links to the actual question headings.
+
+Use the FAQ follow-up mapping to add task links after the subject pages are merged. Keep all research, source inventories and review records out of public results. Test the first-use journey and a direct search arrival on an advanced page before publication; that page must identify its audience and provide a simple route back.

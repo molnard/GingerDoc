@@ -1,0 +1,472 @@
+{
+  "audience": "Ginger users and documentation reviewers",
+  "date": "2026-09-05",
+  "period": [
+    "2019-09-05",
+    "2026-09-05"
+  ],
+  "question_families": [
+    {
+      "id": 1,
+      "family": "Empty or incomplete recovery",
+      "primary_example": {
+        "title": "recover wallet but lost my coin",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2021-04-04",
+        "url": "https://github.com/WalletWasabi/WalletWasabi/issues/5530",
+        "visible_question_evidence": "Words and password restored an empty balance and history.",
+        "access": "Original GitHub issue/discussion API read by the research lane; selected consequential reports independently rechecked."
+      },
+      "additional_example": {
+        "date": "2025-08-31",
+        "url": "https://github.com/orgs/WalletWasabi/discussions/14063"
+      },
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 2,
+      "family": "Forgotten passphrase",
+      "primary_example": {
+        "title": "Lost Passphrase",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2026-05-03",
+        "url": "https://github.com/orgs/WalletWasabi/discussions/14560",
+        "visible_question_evidence": "Only the twelve words were backed up; asks whether recovery remains possible.",
+        "access": "Original GitHub issue/discussion API read by the research lane; selected consequential reports independently rechecked."
+      },
+      "additional_example": {
+        "date": "2026-08-13",
+        "url": "https://github.com/orgs/WalletWasabi/discussions/14935"
+      },
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 3,
+      "family": "Backup and local privacy metadata",
+      "primary_example": {
+        "title": "Anonymity sets get lost when moving a wallet file to another machine",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2021-10-27",
+        "url": "https://github.com/WalletWasabi/WalletWasabi/issues/6589",
+        "visible_question_evidence": "A copied wallet file did not preserve the expected local score data.",
+        "access": "Original GitHub issue/discussion API read by the research lane; selected consequential reports independently rechecked."
+      },
+      "additional_example": {
+        "date": "2022-08-03",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/wffpq0"
+      },
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 4,
+      "family": "Authentic downloads and mobile impostors",
+      "primary_example": {
+        "title": "Desktop before IOS?",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2021-06-03",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/nr0446",
+        "visible_question_evidence": "A phone app requested seed import; asks if desktop setup is required.",
+        "access": "Original public post text available through search indexing; no full corpus or deletion coverage."
+      },
+      "additional_example": {
+        "date": "2021-02-11",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/lhv26q"
+      },
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 5,
+      "family": "Paid at a service but not received",
+      "primary_example": {
+        "title": "am i doing something wrong",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2025-12-05",
+        "url": "https://github.com/orgs/WalletWasabi/discussions/14180",
+        "visible_question_evidence": "Company account says paid while no wallet receipt is visible.",
+        "access": "Original GitHub issue/discussion API read by the research lane; selected consequential reports independently rechecked."
+      },
+      "additional_example": {
+        "date": "2025-11-26",
+        "url": "https://github.com/orgs/WalletWasabi/discussions/14166"
+      },
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 6,
+      "family": "Wrong network and missing coins",
+      "primary_example": {
+        "title": "Where did my coins go?",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2020-07-20",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/hucvj5",
+        "visible_question_evidence": "Changing to a different network created an apparent missing-balance problem.",
+        "access": "Original public post text available through search indexing; no full corpus or deletion coverage."
+      },
+      "additional_example": null,
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 7,
+      "family": "Connection, synchronization and Tor",
+      "primary_example": {
+        "title": "Wallet stop working, apparently issue with tor",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2021-02-08",
+        "url": "https://github.com/WalletWasabi/WalletWasabi/issues/5159",
+        "visible_question_evidence": "Connecting never finishes; user does not know which layer is failing.",
+        "access": "Original GitHub issue/discussion API read by the research lane; selected consequential reports independently rechecked."
+      },
+      "additional_example": {
+        "date": "2025-10-28",
+        "url": "https://github.com/orgs/WalletWasabi/discussions/14137"
+      },
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 8,
+      "family": "Own-node roles and dependencies",
+      "primary_example": {
+        "title": "Can I broadcast transactions with my own full node in Wasabi?",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2020-03-04",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/fdg0j5",
+        "visible_question_evidence": "Asks what external server dependence remains when using a node.",
+        "access": "Original public post text available through search indexing; no full corpus or deletion coverage."
+      },
+      "additional_example": {
+        "date": "2025-09-01",
+        "url": "https://github.com/orgs/WalletWasabi/discussions/14067"
+      },
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 9,
+      "family": "Reinstalling preserves configuration",
+      "primary_example": {
+        "title": "How to fully uninstall Wasabi?",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2026-02-25",
+        "url": "https://github.com/orgs/WalletWasabi/discussions/14370",
+        "visible_question_evidence": "A wrong URL/port survives reinstalling.",
+        "access": "Original GitHub issue/discussion API read by the research lane; selected consequential reports independently rechecked."
+      },
+      "additional_example": {
+        "date": "2020-03-31",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/fsnctw"
+      },
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 10,
+      "family": "CoinJoin waiting states",
+      "primary_example": {
+        "title": "Funds lost? waiting for confirmed funds",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2022-11-23",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/z33fxo",
+        "visible_question_evidence": "Long waiting is interpreted as possible loss of money.",
+        "access": "Original public post text available through search indexing; no full corpus or deletion coverage."
+      },
+      "additional_example": {
+        "date": "2024-08-08",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/1emvntp"
+      },
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 11,
+      "family": "Minimum, small coins and incomplete progress",
+      "primary_example": {
+        "title": "Coinjoining",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2020-11-14",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/ju1rzr",
+        "visible_question_evidence": "Asks whether small coins must first be consolidated to participate.",
+        "access": "Original public post text available through search indexing; no full corpus or deletion coverage."
+      },
+      "additional_example": {
+        "date": "2023-09-03",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/168os2x"
+      },
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 12,
+      "family": "Full costs and meaning of free",
+      "primary_example": {
+        "title": "How are mining fees distributed among participants?",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2026-02-05",
+        "url": "https://github.com/orgs/WalletWasabi/discussions/14308",
+        "visible_question_evidence": "Asks whether mining cost depends on outputs as well as inputs.",
+        "access": "Original GitHub issue/discussion API read by the research lane; selected consequential reports independently rechecked."
+      },
+      "additional_example": {
+        "date": "2024-08-09",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/1emvntp"
+      },
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 13,
+      "family": "Duration, rounds and percentage",
+      "primary_example": {
+        "title": "How long should it take to CoinJoin 1 BTC, 10BTC, 100BTC, 1000BTC?",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2020-01-15",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/eowfrt",
+        "visible_question_evidence": "Expects a completion-time estimate from balance and settings.",
+        "access": "Original public post text available through search indexing; no full corpus or deletion coverage."
+      },
+      "additional_example": {
+        "date": "2023-10-25",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/17gfqhk"
+      },
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 14,
+      "family": "Sleep, close and interrupted participation",
+      "primary_example": {
+        "title": "Coin join with computer off",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2022-01-01",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/rtrfpa",
+        "visible_question_evidence": "Shutdown left uncertainty about registered coins and displayed balance.",
+        "access": "Original public post text available through search indexing; no full corpus or deletion coverage."
+      },
+      "additional_example": {
+        "date": "2026-06-03",
+        "url": "https://github.com/orgs/WalletWasabi/discussions/14643"
+      },
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 15,
+      "family": "Unexpected transaction and automatic CoinJoin",
+      "primary_example": {
+        "title": "Unexplained spend from Wasabi wallet on Dec 18, 2025",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2026-06-19",
+        "url": "https://github.com/orgs/WalletWasabi/discussions/14694",
+        "visible_question_evidence": "Report posted in June describes a December 2025 event; later finds an automatic-participation setting. Cause is unverified.",
+        "access": "Original GitHub issue/discussion API read by the research lane; selected consequential reports independently rechecked."
+      },
+      "additional_example": null,
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 16,
+      "family": "Later spending, combining coins and change",
+      "primary_example": {
+        "title": "Is my wasabi breaking my privacy?",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2019-11-27",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/e2p1j5",
+        "visible_question_evidence": "A prior FAQ rule seems inconsistent with automatic change selection.",
+        "access": "Original public post text available through search indexing; no full corpus or deletion coverage."
+      },
+      "additional_example": {
+        "date": "2023-08-21",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/15xfzwn"
+      },
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 17,
+      "family": "Hardware storage after CoinJoin",
+      "primary_example": {
+        "title": "Send funds directly from coinjoin to hardware wallet",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2019-10-03",
+        "url": "https://github.com/WalletWasabi/WalletWasabi/issues/2394",
+        "visible_question_evidence": "Feature request to avoid awkward transfers and relinking; not proof a feature was available.",
+        "access": "Original GitHub issue/discussion API read by the research lane; selected consequential reports independently rechecked."
+      },
+      "additional_example": {
+        "date": "2021-07-17",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/om6k8b"
+      },
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 18,
+      "family": "Same keys in different applications",
+      "primary_example": {
+        "title": "FullkeyPath m/84/0/0/0/35",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2026-08-19",
+        "url": "https://github.com/orgs/WalletWasabi/discussions/14952",
+        "visible_question_evidence": "Phone import and many generated addresses produced an incomplete view; report does not prove a diagnosis or official mobile product.",
+        "access": "Original GitHub issue/discussion API read by the research lane; selected consequential reports independently rechecked."
+      },
+      "additional_example": {
+        "date": "2020-09-10",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/ipw4h0"
+      },
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 19,
+      "family": "Reused addresses and multi-coin selection",
+      "primary_example": {
+        "title": "Sending single UTXO from a set that is linked to one address",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2025-09-17",
+        "url": "https://github.com/orgs/WalletWasabi/discussions/14093",
+        "visible_question_evidence": "Requests documentation about a selection behavior after address reuse.",
+        "access": "Original GitHub issue/discussion API read by the research lane; selected consequential reports independently rechecked."
+      },
+      "additional_example": null,
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 20,
+      "family": "Pending payments and time estimates",
+      "primary_example": {
+        "title": "Wasabi confirming transaction estimate is wack",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2020-10-21",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/jffdb3",
+        "visible_question_evidence": "Six-hour estimate has become more than a day; asks if the transaction expires.",
+        "access": "Original public post text available through search indexing; no full corpus or deletion coverage."
+      },
+      "additional_example": {
+        "date": "2024-04-19",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/1c7pplv"
+      },
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 21,
+      "family": "Cancellation and replacement",
+      "primary_example": {
+        "title": "Cancel transaction",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2022-04-01",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/tu4fkj",
+        "visible_question_evidence": "Wants to stop a pending payment.",
+        "access": "Original public post text available through search indexing; no full corpus or deletion coverage."
+      },
+      "additional_example": {
+        "date": "2024-10-18",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/1g6hthm"
+      },
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 22,
+      "family": "Spendable balance and sending everything",
+      "primary_example": {
+        "title": "Sending all BTC from Wallet - InsufficientBalanceException",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2021-12-15",
+        "url": "https://github.com/WalletWasabi/WalletWasabi/issues/6878",
+        "visible_question_evidence": "Full-balance payment, fee subtraction and active CoinJoin are confusing; historical report is not a current Ginger bug.",
+        "access": "Original GitHub issue/discussion API read by the research lane; selected consequential reports independently rechecked."
+      },
+      "additional_example": null,
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 23,
+      "family": "Safe support and wallet validation scams",
+      "primary_example": {
+        "title": "Follow-up to Stuck at Awaiting coinjoin",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2024-08-09",
+        "url": "https://www.reddit.com/r/WasabiWallet/comments/1emvntp",
+        "visible_question_evidence": "Follow-up describes messages leading to a site that asked for the seed.",
+        "access": "Original public post text available through search indexing; no full corpus or deletion coverage."
+      },
+      "additional_example": {
+        "date": "2020-01-24",
+        "url": "https://github.com/WalletWasabi/WalletWasabi/issues/3009"
+      },
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 24,
+      "family": "Exchange acceptance",
+      "primary_example": {
+        "title": "Transfers between Wasabi and (for example) Coinbase still possible?",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2023-07-01",
+        "url": "https://bitcointalk.org/index.php?topic=5458193.0",
+        "visible_question_evidence": "Asks whether spending or selling via an exchange will work.",
+        "access": "Original public post text available through search indexing; no full corpus or deletion coverage."
+      },
+      "additional_example": {
+        "date": "2022-12-10",
+        "url": "https://www.reddit.com/r/CryptoCurrency/comments/zhqjrl"
+      },
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    },
+    {
+      "id": 25,
+      "family": "Proving control with a signed message",
+      "primary_example": {
+        "title": "Sign message to prove wallet ownership",
+        "publisher": "Original public question author; GitHub or community forum",
+        "date": "2025-10-25",
+        "url": "https://github.com/orgs/WalletWasabi/discussions/14132",
+        "visible_question_evidence": "An old issue causes doubt about whether an exchange-requested signing operation exists.",
+        "access": "Original GitHub issue/discussion API read by the research lane; selected consequential reports independently rechecked."
+      },
+      "additional_example": null,
+      "confidence": "High that the question exists; anecdotal demand signal, not a verified diagnosis or frequency measurement."
+    }
+  ],
+  "architecture_sources": [
+    {
+      "title": "BTCPay User Guide",
+      "publisher": "BTCPay Server project",
+      "date": "undated; accessed 2026-09-05",
+      "url": "https://docs.btcpayserver.org/Guide/",
+      "claim": "Numbered Getting Started route is separate from feature reference; top-level documentation also separates deployment and development."
+    },
+    {
+      "title": "BTCPay navigation configuration",
+      "publisher": "BTCPay Server project",
+      "date": "2026-09-04 commit",
+      "url": "https://github.com/btcpayserver/btcpayserver-doc/blob/c8d6a1d2987d589f78e8c3b60c49d73dc87283d8/docs/.vuepress/config.js#L21",
+      "claim": "Repository configuration corroborates live user, deployment and developer navigation."
+    },
+    {
+      "title": "BTCPay FAQ and Common Issues",
+      "publisher": "BTCPay Server project",
+      "date": "undated; accessed 2026-09-05",
+      "url": "https://docs.btcpayserver.org/FAQ/",
+      "claim": "FAQ is a separate topic-grouped entrance."
+    },
+    {
+      "title": "Electrum documentation index",
+      "publisher": "Electrum project",
+      "date": "undated; accessed 2026-09-05",
+      "url": "https://electrum.readthedocs.io/en/latest/",
+      "claim": "Explicit beginner, advanced, command-line and developer navigation groups; some beginner content remains technical."
+    },
+    {
+      "title": "Sparrow Best Practices",
+      "publisher": "Sparrow Wallet project",
+      "date": "undated; accessed 2026-09-05",
+      "url": "https://sparrowwallet.com/docs/best-practices.html",
+      "claim": "Beginner, intermediate and expert stages within an article; not a site-wide level switch."
+    }
+  ],
+  "source_rules": "Community content is demand evidence only. Ginger answers are checked against v2.0.26 source, current advertised fees and existing pinned topic evidence. Original source names and URLs are retained only for accurate research provenance.",
+  "gaps_and_limits": [
+    "Targeted sample; not an exhaustive seven-year archive, frequency ranking or measured SEO demand.",
+    "Some direct web opens returned cache misses; GitHub API supplied original discussions. Reddit relies on indexed original post text.",
+    "Deleted, private or unindexed questions may be missing.",
+    "Different releases and other products are not evidence of current Ginger functions.",
+    "Historical fixed minima, input limits, public-testnet recipes, no-RBF answers and inactive-service workarounds excluded."
+  ],
+  "search_record": [
+    "Official BTCPay navigation and FAQ, with pinned config; official Electrum and Sparrow structure.",
+    "Original historical questions grouped by recovery, connection, CoinJoin eligibility/costs, spending, hardware and support, covering 2019–2021, 2022–2024 and 2025–2026.",
+    "Latest Ginger release and current website fee policy; released source checks for behavior and English labels.",
+    "Independent original API spot checks for recovery, hardware-destination request, spend-all report and 2026 passphrase/migration questions."
+  ],
+  "stop_reason": "The 25 families map to completed answers, architecture patterns converge across three official projects, and high-impact Ginger claims have released-source support. Further broad searches are unlikely to change the structure; no complete-corpus claim is made."
+}

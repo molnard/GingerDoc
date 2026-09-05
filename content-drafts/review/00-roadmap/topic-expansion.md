@@ -1,5 +1,7 @@
 # Implementation of the Additional Research Topics
 
+This record describes the earlier ten-topic expansion. The subsequent reader-level revision brings the manual to 42 pages with separate basic and advanced FAQs; see [the current reader structure](reader-research.md).
+
 All ten proposals from the [publication and talk research](additional-topics.md) have been developed into complete English user-manual drafts. Six new pages increase the manuscript count from 30 to 36. Four expansions appear in three existing pages, with costs and privacy progress sharing a chapter. The CoinJoin settings chapter also records a consequential release check.
 
 ## Review mapping

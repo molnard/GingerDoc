@@ -1,44 +1,26 @@
-# Editorial foundation: English Ginger user manual
+# Editorial Foundation: Ginger User Manual
 
-This batch provides 36 complete English Markdown manuscripts in 11 independently reviewable subject PRs, plus this foundation PR. It expands the sparse existing documentation using Wasabi's user-facing topics as a research inventory and Ginger's released behavior as the feature boundary.
+The batch contains 42 complete English reader pages in 11 independent subject PRs, plus this foundation. Start here is the first-use route; everyday tasks, plain-language explanations and advanced references have distinct entrances. The basic FAQ contains 34 short answers and the advanced FAQ contains 25.
 
-Application baseline: **v2.0.26**, published 2026-07-31, commit `fa27e5419da5dfa391fb1db38012c0b1141f59b3`. Wasabi documentation inventory: `6d1a5730824e7757e2d3a57bcbbafae8c0a25c8c`. Research and source review date: **2026-09-05**. The 44 Wasabi pages contain 676 headings/subquestions; the inventory preserves a source-line locator for every one, including excluded material.
+All PRs target `molnard/GingerDoc:master`. The application baseline is v2.0.26, published 2026-07-31, commit `fa27e5419da5dfa391fb1db38012c0b1141f59b3`. Research and source checks are dated 2026-09-05. The subject PRs can be reviewed independently; links across topics are added during integration using the stable page IDs.
 
-## Review sequence
+## Review the structure
 
-All branches target **molnard/GingerDoc:master**, starting at `b48dfd161434bdfad52cf989baee9cb8c9505a3a`. They may be reviewed in any order and do not wait for one another to merge. Subject PRs only add their own topic and review record. This foundation provides the cross-topic registry and editorial rules.
-
-| PR batch | Scope |
-| --- | --- |
-| 00 | This foundation, inventory, SEO research, localization contract, and publication handoff |
-| 01 | Installation, signature verification, and first wallet |
-| 02 | Backups, recovery, passphrases, and 2FA |
-| 03 | CoinJoin operation, settings, fees, progress, and output wallets |
-| 04 | Receive/send, fees/change, coin control, history, acceleration/cancellation, PayJoin, message signing |
-| 05 | Hardware wallets, PSBT, and exchange-to-cold-storage walkthrough |
-| 06 | Tor/sync, own node, fee providers, appearance/languages, and Secret Hunt |
-| 07 | Buy/sell and provider-order support |
-| 08 | Troubleshooting, FAQ, and glossary |
-| 09 | Bitcoin privacy, spending examples, wallet migration, information sharing, and repeated receipts |
-| 10 | CoinJoin education and decision-making |
-| 11 | Self-custody education and recoverable security |
-
-## Read the research
-
-- [Page registry and intended journeys](page-registry.md)
-- [Existing documentation gaps and Ginger-specific additions](gaps-and-differences.md)
-- [Wasabi coverage, exclusions, and source locators](wasabi-coverage.md)
-- [Top three educational topics and SEO research](audience-and-seo.md)
-- [Research from talks, articles, and publications](additional-topics.md)
-- [Implementation of all ten research topics](topic-expansion.md)
-- [Authoring and future localization](authoring-and-localization.md)
-- [Engine/search decision and publication checks](integration.md)
+- [Reader paths and all pages](page-registry.md)
+- [Beginner/advanced structure and FAQ research](reader-research.md)
+- [Topic coverage and exclusions](topic-coverage.md)
+- [Existing gaps and released-feature boundaries](gaps-and-differences.md)
+- [Audience and search-intent research](audience-and-seo.md)
+- [Research from talks, articles and publications](additional-topics.md)
+- [Implementation of the earlier ten research topics](topic-expansion.md)
+- [Authoring, reader levels and future localization](authoring-and-localization.md)
+- [Engine, private search and publication handoff](integration.md)
 - [Validation results and limits](validation.md)
 
-Machine-readable companions are `page-registry.json`, `locales.json`, `wasabi-coverage.csv`, and `baseline.json` in this directory. They are editorial inputs, not runtime code. The registry uses stable page IDs so the eventual engine can choose routes without rewriting the manuscripts.
+## What belongs on the public site
 
-## What has been checked
+The public manual is the English reader content under `en/`, eventually localized after English review and merging. Source inventories, comparisons, original question records and implementation evidence belong only in `review/`; exclude them from public navigation and search. Reader instructions and PR descriptions focus on Ginger.
 
-Manuscripts are complete reading drafts, with source and UI-label evidence in each topic's review record. UI availability and behavior were inspected in the released code. No real wallet payment, CoinJoin, provider order, 2FA setup, or physical-device compatibility test was performed. Source evidence does not replace the maintainer's review of sensitive user instructions before publication.
+`page-registry.json` gives stable IDs and paths. `navigation.json` gives the reading order, page levels, search-result requirements and FAQ follow-up mapping. `question-research.json` retains accurate source provenance for reviewers. `locales.json` prepares the nine released UI languages without publishing unreviewed translations.
 
-No screenshots, generated translations, site dependencies, deployment changes, or upstream PRs are included. English content is reviewed and merged first. The site engine is still subject to Norbi's decision; these Markdown files can be integrated afterward.
+The Markdown remains outside the live site build while the engine decision is pending. No deployment or dependency change is included. Source inspection and document checks do not replace representative wallet, recovery and hardware walkthroughs before public integration.

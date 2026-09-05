@@ -1,11 +1,23 @@
 [
   {
+    "path": "en/getting-started/verify-download.md",
+    "doc_id": "getting-started.verify-download",
+    "title": "Verify a Ginger Wallet Download",
+    "description": "Check a Ginger Wallet release signature and signing-key fingerprint before installing the application.",
+    "lang": "en-US",
+    "verified_release": "v2.0.26",
+    "reader_level": "advanced",
+    "batch": "01",
+    "planned_related_ids": []
+  },
+  {
     "path": "en/getting-started/first-wallet.md",
     "doc_id": "getting-started.first-wallet",
     "title": "Create and Open Your First Ginger Wallet",
     "description": "Create a Bitcoin wallet, record its recovery words and passphrase, and understand the first synchronization and CoinJoin settings.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "beginner",
     "batch": "01",
     "planned_related_ids": [
       "backup-recovery.backups",
@@ -21,41 +33,57 @@
     "description": "Choose the right Ginger Wallet desktop download, check compatibility, and install the released application.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "beginner",
     "batch": "01",
     "planned_related_ids": []
   },
   {
-    "path": "en/getting-started/verify-download.md",
-    "doc_id": "getting-started.verify-download",
-    "title": "Verify a Ginger Wallet Download",
-    "description": "Check a Ginger Wallet release signature and signing-key fingerprint before installing the application.",
+    "path": "en/getting-started/start-here.md",
+    "doc_id": "getting-started.start-here",
+    "title": "Start Here: Your First Steps with Ginger",
+    "description": "Learn what Ginger does, protect your recovery backup, and follow a simple first receive-and-send path before exploring optional advanced features.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "beginner",
     "batch": "01",
-    "planned_related_ids": []
+    "planned_related_ids": [
+      "getting-started.install",
+      "getting-started.first-wallet",
+      "backup-recovery.backups",
+      "payments.receive",
+      "payments.send",
+      "coinjoin.use-coinjoin",
+      "help.faq"
+    ]
   },
   {
-    "path": "en/backup-recovery/backups.md",
-    "doc_id": "backup-recovery.backups",
-    "title": "Back Up Your Ginger Wallet",
-    "description": "Understand recovery words, the BIP39 passphrase, wallet files, and the extra data needed to preserve labels and settings.",
+    "path": "en/backup-recovery/backup-files.md",
+    "doc_id": "backup-recovery.backup-files",
+    "title": "Wallet Files, Metadata and Passphrase Details",
+    "description": "Preserve Ginger wallet JSON and ATTR files, understand the 2FA file dependency, and maintain a recoverable passphrase without replacing the basic word backup.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
-    "batch": "02",
-    "planned_related_ids": []
-  },
-  {
-    "path": "en/backup-recovery/restore.md",
-    "doc_id": "backup-recovery.restore",
-    "title": "Recover a Wallet or Missing Balance",
-    "description": "Restore a Ginger wallet with recovery words and its original passphrase, or import a compatible wallet file without overwriting your only backup.",
-    "lang": "en-US",
-    "verified_release": "v2.0.26",
+    "reader_level": "advanced",
     "batch": "02",
     "planned_related_ids": [
       "backup-recovery.backups",
-      "backup-recovery.two-factor-authentication",
-      "help.troubleshooting"
+      "backup-recovery.recovery-options",
+      "backup-recovery.two-factor-authentication"
+    ]
+  },
+  {
+    "path": "en/backup-recovery/recovery-options.md",
+    "doc_id": "backup-recovery.recovery-options",
+    "title": "Advanced Recovery: Accounts, Address Scanning and Files",
+    "description": "Investigate Ginger recovery compatibility, the gap limit, wallet JSON imports and missing metadata after checking the original recovery words and passphrase.",
+    "lang": "en-US",
+    "verified_release": "v2.0.26",
+    "reader_level": "advanced",
+    "batch": "02",
+    "planned_related_ids": [
+      "backup-recovery.restore",
+      "backup-recovery.backup-files",
+      "learn-privacy.wallet-migration"
     ]
   },
   {
@@ -65,8 +93,38 @@
     "description": "Set up Ginger two-factor authentication and understand its wallet-file encryption, Tor requirement, and recovery limits.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "advanced",
     "batch": "02",
     "planned_related_ids": []
+  },
+  {
+    "path": "en/backup-recovery/backups.md",
+    "doc_id": "backup-recovery.backups",
+    "title": "Back Up Your Ginger Wallet",
+    "description": "Keep and verify the recovery words and original passphrase needed to recover a Ginger software wallet after losing the computer.",
+    "lang": "en-US",
+    "verified_release": "v2.0.26",
+    "reader_level": "beginner",
+    "batch": "02",
+    "planned_related_ids": [
+      "backup-recovery.restore",
+      "backup-recovery.backup-files"
+    ]
+  },
+  {
+    "path": "en/backup-recovery/restore.md",
+    "doc_id": "backup-recovery.restore",
+    "title": "Recover a Wallet or Missing Balance",
+    "description": "Recover a Ginger wallet with its original words and passphrase, then check the selected wallet and scan progress before investigating special recovery cases.",
+    "lang": "en-US",
+    "verified_release": "v2.0.26",
+    "reader_level": "everyday",
+    "batch": "02",
+    "planned_related_ids": [
+      "backup-recovery.backups",
+      "backup-recovery.recovery-options",
+      "help.faq"
+    ]
   },
   {
     "path": "en/coinjoin/fees-and-progress.md",
@@ -75,6 +133,7 @@
     "description": "Budget the full cost of CoinJoin, distinguish fee exemptions from free transactions, and interpret Ginger privacy scores with worked examples.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "advanced",
     "batch": "03",
     "planned_related_ids": [
       "coinjoin.settings",
@@ -84,12 +143,28 @@
     ]
   },
   {
+    "path": "en/coinjoin/round-details.md",
+    "doc_id": "coinjoin.round-details",
+    "title": "CoinJoin Rounds and Input Eligibility",
+    "description": "Understand Ginger CoinJoin phases, input eligibility and retry behavior when ordinary start, pause and waiting-state checks do not explain the result.",
+    "lang": "en-US",
+    "verified_release": "v2.0.26",
+    "reader_level": "advanced",
+    "batch": "03",
+    "planned_related_ids": [
+      "coinjoin.use-coinjoin",
+      "coinjoin.settings",
+      "coinjoin.fees-and-progress"
+    ]
+  },
+  {
     "path": "en/coinjoin/settings.md",
     "doc_id": "coinjoin.settings",
     "title": "Configure CoinJoin and Output Wallets",
     "description": "Understand Ginger CoinJoin privacy and cost settings, excluded coins, and sending CoinJoin outputs to another loaded wallet.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "advanced",
     "batch": "03",
     "planned_related_ids": []
   },
@@ -100,8 +175,14 @@
     "description": "Start, pause, and monitor Ginger CoinJoin, understand eligible funds, and avoid interrupting an active round.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "beginner",
     "batch": "03",
-    "planned_related_ids": []
+    "planned_related_ids": [
+      "coinjoin.round-details",
+      "coinjoin.settings",
+      "coinjoin.fees-and-progress",
+      "help.faq"
+    ]
   },
   {
     "path": "en/payments/coin-control-history.md",
@@ -110,8 +191,24 @@
     "description": "Inspect Ginger UTXOs and payment history, select coins deliberately, and understand when speeding up or cancelling is possible.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "advanced",
     "batch": "04",
     "planned_related_ids": []
+  },
+  {
+    "path": "en/payments/fees-and-change.md",
+    "doc_id": "payments.fees-and-change",
+    "title": "Transaction Fees, Custom Rates and Change",
+    "description": "Understand satoshi-per-byte fee rates, manual fee entry, change outputs and amount-changing privacy suggestions in Ginger.",
+    "lang": "en-US",
+    "verified_release": "v2.0.26",
+    "reader_level": "advanced",
+    "batch": "04",
+    "planned_related_ids": [
+      "payments.send",
+      "payments.coin-control-history",
+      "learn-privacy.spending-after-coinjoin"
+    ]
   },
   {
     "path": "en/payments/payjoin-message-signing.md",
@@ -120,6 +217,7 @@
     "description": "Send a PayJoin payment request, understand recipient knowledge, wallet fingerprints and fallback, and sign a narrowly scoped address-ownership message.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "advanced",
     "batch": "04",
     "planned_related_ids": [
       "payments.send",
@@ -134,6 +232,7 @@
     "description": "Generate a Ginger receiving address, choose SegWit or Taproot where supported, label payments, and check confirmations.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "beginner",
     "batch": "04",
     "planned_related_ids": []
   },
@@ -144,22 +243,13 @@
     "description": "Prepare a Ginger payment, verify the recipient and amount, understand fee rates and change, and authorize the transaction.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "beginner",
     "batch": "04",
     "planned_related_ids": [
+      "payments.fees-and-change",
       "payments.coin-control-history",
-      "coinjoin.fees-and-progress",
-      "hardware-wallets.psbt"
+      "help.faq"
     ]
-  },
-  {
-    "path": "en/hardware-wallets/connect.md",
-    "doc_id": "hardware-wallets.connect",
-    "title": "Connect and Use a Hardware Wallet",
-    "description": "Connect a supported hardware wallet to Ginger, verify receiving addresses on the device, and approve payments safely.",
-    "lang": "en-US",
-    "verified_release": "v2.0.26",
-    "batch": "05",
-    "planned_related_ids": []
   },
   {
     "path": "en/hardware-wallets/exchange-to-cold-storage.md",
@@ -168,6 +258,7 @@
     "description": "Withdraw bitcoin, use Ginger CoinJoin, and move funds to a verified hardware wallet while accounting for fees and preserving privacy.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "advanced",
     "batch": "05",
     "planned_related_ids": [
       "hardware-wallets.connect",
@@ -185,6 +276,18 @@
     "description": "Prepare a Bitcoin transaction in Ginger, sign it with a hardware wallet using a file, and import the result for broadcast.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "advanced",
+    "batch": "05",
+    "planned_related_ids": []
+  },
+  {
+    "path": "en/hardware-wallets/connect.md",
+    "doc_id": "hardware-wallets.connect",
+    "title": "Connect and Use a Hardware Wallet",
+    "description": "Connect a supported hardware wallet to Ginger, verify receiving addresses on the device, and approve payments safely.",
+    "lang": "en-US",
+    "verified_release": "v2.0.26",
+    "reader_level": "everyday",
     "batch": "05",
     "planned_related_ids": []
   },
@@ -195,6 +298,7 @@
     "description": "Configure Ginger block downloads from a node you control, review the optional bundled Bitcoin Core feature, and choose a fee-rate provider.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "advanced",
     "batch": "06",
     "planned_related_ids": []
   },
@@ -205,6 +309,7 @@
     "description": "Change Ginger language, display formats, background behavior, browser preferences, and discreet mode without confusing them with wallet security.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "everyday",
     "batch": "06",
     "planned_related_ids": []
   },
@@ -215,6 +320,7 @@
     "description": "Find Ginger Secret Hunt event results, control wallet participation, and understand the information the event service receives.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "everyday",
     "batch": "06",
     "planned_related_ids": []
   },
@@ -225,6 +331,7 @@
     "description": "Understand how Ginger connects, what Tor protects, and how to investigate slow synchronization without exposing wallet activity.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "everyday",
     "batch": "06",
     "planned_related_ids": []
   },
@@ -235,6 +342,7 @@
     "description": "Compare provider offers in Ginger, complete a purchase in the provider browser flow, and track delivery to your wallet.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "everyday",
     "batch": "07",
     "planned_related_ids": [
       "buy-sell.sell-and-orders",
@@ -249,18 +357,39 @@
     "description": "Complete a Ginger sell order with the provider exact amount and address, track status, and contact the right support service.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "everyday",
     "batch": "07",
     "planned_related_ids": []
   },
   {
-    "path": "en/help/faq.md",
-    "doc_id": "help.faq",
-    "title": "Ginger Wallet Frequently Asked Questions",
-    "description": "Find clear answers about Ginger custody, recovery, fees, privacy, hardware wallets, and supported released features.",
+    "path": "en/help/advanced-faq.md",
+    "doc_id": "help.advanced-faq",
+    "title": "Advanced Ginger Wallet FAQ",
+    "description": "Find released Ginger answers about recovery scanning, wallet metadata, xpubs, coin control, privacy progress, full CoinJoin costs, output wallets and data sharing.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "advanced",
     "batch": "08",
-    "planned_related_ids": []
+    "planned_related_ids": [
+      "help.faq",
+      "help.troubleshooting",
+      "help.glossary"
+    ]
+  },
+  {
+    "path": "en/help/faq.md",
+    "doc_id": "help.faq",
+    "title": "Ginger Wallet FAQ: Start Here",
+    "description": "Get short answers about missing funds, backups, recovery, CoinJoin waiting and fees, pending payments, hardware wallets and safe support.",
+    "lang": "en-US",
+    "verified_release": "v2.0.26",
+    "reader_level": "beginner",
+    "batch": "08",
+    "planned_related_ids": [
+      "getting-started.start-here",
+      "help.troubleshooting",
+      "help.advanced-faq"
+    ]
   },
   {
     "path": "en/help/glossary.md",
@@ -269,6 +398,7 @@
     "description": "Understand the terms used in Ginger: UTXO, change, passphrase, CoinJoin, anonymity score, Tor, PSBT, and more.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "everyday",
     "batch": "08",
     "planned_related_ids": []
   },
@@ -279,17 +409,8 @@
     "description": "Diagnose missing balances, connection problems, CoinJoin waiting states, 2FA failures, and hardware issues while preserving recovery data.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "everyday",
     "batch": "08",
-    "planned_related_ids": []
-  },
-  {
-    "path": "en/learn-privacy/habits.md",
-    "doc_id": "learn-privacy.habits",
-    "title": "Bitcoin Privacy Habits Before and After a Payment",
-    "description": "Apply practical habits around receiving addresses, labels, coin selection, browsers, and support requests when using Ginger Wallet.",
-    "lang": "en-US",
-    "verified_release": "v2.0.26",
-    "batch": "09",
     "planned_related_ids": []
   },
   {
@@ -299,6 +420,7 @@
     "description": "Understand what Ginger synchronization, CoinJoin, providers, explorers, 2FA, Secret Hunt, and other wallet apps can reveal and what Tor changes.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "advanced",
     "batch": "09",
     "planned_related_ids": [
       "settings-network.tor-sync",
@@ -310,27 +432,13 @@
     ]
   },
   {
-    "path": "en/learn-privacy/repeated-payments.md",
-    "doc_id": "learn-privacy.repeated-payments",
-    "title": "Receiving Donations and Repeated Payments",
-    "description": "Receive Bitcoin donations and recurring payments with fresh addresses, useful labels, careful refunds, and deliberate handling of the resulting coins.",
-    "lang": "en-US",
-    "verified_release": "v2.0.26",
-    "batch": "09",
-    "planned_related_ids": [
-      "payments.receive",
-      "learn-privacy.spending-after-coinjoin",
-      "payments.coin-control-history",
-      "hardware-wallets.exchange-to-cold-storage"
-    ]
-  },
-  {
     "path": "en/learn-privacy/spending-after-coinjoin.md",
     "doc_id": "learn-privacy.spending-after-coinjoin",
     "title": "Spending After CoinJoin: Worked Examples",
     "description": "Use practical Bitcoin payment examples to understand coin selection, change, consolidation, and what can become visible after CoinJoin.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "advanced",
     "batch": "09",
     "planned_related_ids": [
       "learn-privacy.habits",
@@ -346,6 +454,7 @@
     "description": "Compare restoring the same Bitcoin keys, connecting hardware to another wallet app, and moving funds to new keys without assuming past disclosures disappear.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "advanced",
     "batch": "09",
     "planned_related_ids": [
       "backup-recovery.restore",
@@ -356,12 +465,24 @@
     ]
   },
   {
+    "path": "en/learn-privacy/habits.md",
+    "doc_id": "learn-privacy.habits",
+    "title": "Bitcoin Privacy Habits Before and After a Payment",
+    "description": "Apply practical habits around receiving addresses, labels, coin selection, browsers, and support requests when using Ginger Wallet.",
+    "lang": "en-US",
+    "verified_release": "v2.0.26",
+    "reader_level": "beginner",
+    "batch": "09",
+    "planned_related_ids": []
+  },
+  {
     "path": "en/learn-privacy/who-can-see.md",
     "doc_id": "learn-privacy.who-can-see",
     "title": "Who Can See My Bitcoin Transactions?",
     "description": "Learn what a Bitcoin address reveals, how identity and transaction links combine, and where Ginger privacy tools can help.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "beginner",
     "batch": "09",
     "planned_related_ids": [
       "learn-privacy.habits",
@@ -370,17 +491,19 @@
     ]
   },
   {
-    "path": "en/learn-coinjoin/explained.md",
-    "doc_id": "learn-coinjoin.explained",
-    "title": "What Is CoinJoin? Benefits, Costs, and Limitations",
-    "description": "Understand collaborative Bitcoin transactions, what CoinJoin can improve, and why fees, timing, and later spending still matter.",
+    "path": "en/learn-privacy/repeated-payments.md",
+    "doc_id": "learn-privacy.repeated-payments",
+    "title": "Receiving Donations and Repeated Payments",
+    "description": "Receive Bitcoin donations and recurring payments with fresh addresses, useful labels, careful refunds, and deliberate handling of the resulting coins.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
-    "batch": "10",
+    "reader_level": "everyday",
+    "batch": "09",
     "planned_related_ids": [
-      "learn-coinjoin.when-to-use",
-      "coinjoin.fees-and-progress",
-      "coinjoin.use-coinjoin"
+      "payments.receive",
+      "learn-privacy.spending-after-coinjoin",
+      "payments.coin-control-history",
+      "hardware-wallets.exchange-to-cold-storage"
     ]
   },
   {
@@ -390,6 +513,7 @@
     "description": "Distinguish control of Bitcoin keys, CoinJoin privacy assumptions, coordinator availability, participant independence, and software verification.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "advanced",
     "batch": "10",
     "planned_related_ids": [
       "learn-coinjoin.explained",
@@ -400,28 +524,30 @@
     ]
   },
   {
+    "path": "en/learn-coinjoin/explained.md",
+    "doc_id": "learn-coinjoin.explained",
+    "title": "What Is CoinJoin? A Simple Explanation",
+    "description": "Learn in plain language how a shared Bitcoin transaction can help privacy, what it costs and what it cannot hide.",
+    "lang": "en-US",
+    "verified_release": "v2.0.26",
+    "reader_level": "beginner",
+    "batch": "10",
+    "planned_related_ids": [
+      "learn-coinjoin.when-to-use",
+      "coinjoin.fees-and-progress",
+      "coinjoin.use-coinjoin"
+    ]
+  },
+  {
     "path": "en/learn-coinjoin/when-to-use.md",
     "doc_id": "learn-coinjoin.when-to-use",
     "title": "When Does CoinJoin Make Sense?",
     "description": "Evaluate whether CoinJoin addresses your Bitcoin privacy concern, what it costs, and how to plan spending afterward.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "everyday",
     "batch": "10",
     "planned_related_ids": []
-  },
-  {
-    "path": "en/learn-self-custody/basics.md",
-    "doc_id": "learn-self-custody.basics",
-    "title": "Bitcoin Self-Custody: Backups, Passphrases, and Hardware Wallets",
-    "description": "Learn who can spend your bitcoin, what makes a recovery backup complete, and how Ginger software and hardware wallets differ.",
-    "lang": "en-US",
-    "verified_release": "v2.0.26",
-    "batch": "11",
-    "planned_related_ids": [
-      "learn-self-custody.security-routine",
-      "backup-recovery.backups",
-      "hardware-wallets.connect"
-    ]
   },
   {
     "path": "en/learn-self-custody/security-routine.md",
@@ -430,11 +556,27 @@
     "description": "Build a recoverable Bitcoin security routine and respond appropriately to exposed addresses, xpubs, wallet files, recovery words or devices.",
     "lang": "en-US",
     "verified_release": "v2.0.26",
+    "reader_level": "advanced",
     "batch": "11",
     "planned_related_ids": [
       "backup-recovery.backups",
       "backup-recovery.two-factor-authentication",
       "learn-privacy.wallet-migration"
+    ]
+  },
+  {
+    "path": "en/learn-self-custody/basics.md",
+    "doc_id": "learn-self-custody.basics",
+    "title": "Bitcoin Self-Custody: Backups, Passphrases, and Hardware Wallets",
+    "description": "Learn who can spend your bitcoin, what makes a recovery backup complete, and how Ginger software and hardware wallets differ.",
+    "lang": "en-US",
+    "verified_release": "v2.0.26",
+    "reader_level": "beginner",
+    "batch": "11",
+    "planned_related_ids": [
+      "learn-self-custody.security-routine",
+      "backup-recovery.backups",
+      "hardware-wallets.connect"
     ]
   }
 ]

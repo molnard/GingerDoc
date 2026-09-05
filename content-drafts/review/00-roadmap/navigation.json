@@ -1,0 +1,544 @@
+{
+  "schema_version": 1,
+  "default_entry": "getting-started.start-here",
+  "groups": [
+    {
+      "id": "start",
+      "label": "Start here",
+      "intro": "The first-wallet route and short answers. No custom configuration is a prerequisite.",
+      "pages": [
+        "getting-started.start-here",
+        "getting-started.install",
+        "getting-started.first-wallet",
+        "backup-recovery.backups",
+        "payments.receive",
+        "payments.send",
+        "coinjoin.use-coinjoin",
+        "help.faq"
+      ]
+    },
+    {
+      "id": "plain",
+      "label": "Privacy explained simply",
+      "intro": "Plain-language explanations for decisions before changing settings.",
+      "pages": [
+        "learn-privacy.who-can-see",
+        "learn-privacy.habits",
+        "learn-coinjoin.explained",
+        "learn-self-custody.basics"
+      ]
+    },
+    {
+      "id": "everyday",
+      "label": "Everyday use",
+      "intro": "Choose the task you need; these are not extra steps required to finish setup.",
+      "pages": [
+        "backup-recovery.restore",
+        "hardware-wallets.connect",
+        "settings-network.preferences",
+        "settings-network.secret-hunt",
+        "settings-network.tor-sync",
+        "buy-sell.buy",
+        "buy-sell.sell-and-orders",
+        "help.glossary",
+        "help.troubleshooting",
+        "learn-privacy.repeated-payments",
+        "learn-coinjoin.when-to-use"
+      ]
+    },
+    {
+      "id": "advanced",
+      "label": "Advanced use",
+      "intro": "Optional reference for a specific need. Each page states prerequisites and its reading level.",
+      "pages": [
+        "getting-started.verify-download",
+        "backup-recovery.backup-files",
+        "backup-recovery.recovery-options",
+        "backup-recovery.two-factor-authentication",
+        "coinjoin.fees-and-progress",
+        "coinjoin.round-details",
+        "coinjoin.settings",
+        "payments.coin-control-history",
+        "payments.fees-and-change",
+        "payments.payjoin-message-signing",
+        "hardware-wallets.exchange-to-cold-storage",
+        "hardware-wallets.psbt",
+        "settings-network.full-node-fees",
+        "help.advanced-faq",
+        "learn-privacy.information-sharing",
+        "learn-privacy.spending-after-coinjoin",
+        "learn-privacy.wallet-migration",
+        "learn-coinjoin.trust-and-limits",
+        "learn-self-custody.security-routine"
+      ]
+    }
+  ],
+  "help_entry": "help.faq",
+  "advanced_help_entry": "help.advanced-faq",
+  "search_fields": [
+    "title",
+    "description",
+    "body",
+    "reader_level"
+  ],
+  "search_policy": "Show reading level on every result; prefer the beginner answer for broad first-use questions; allow Advanced as an explicit filter; do not hide exact advanced matches.",
+  "exclude_from_public_navigation": [
+    "review/"
+  ],
+  "faq_follow_up_links": [
+    {
+      "page_id": "help.faq",
+      "anchor": "what-is-ginger-and-does-it-hold-my-bitcoin",
+      "related_guide_ids": [
+        "getting-started.start-here",
+        "learn-self-custody.basics"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "is-there-an-official-mobile-or-web-wallet",
+      "related_guide_ids": [
+        "getting-started.install"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "do-i-need-an-account-my-own-node-or-a-hardware-wallet",
+      "related_guide_ids": [
+        "getting-started.first-wallet",
+        "settings-network.full-node-fees"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "do-i-have-to-use-coinjoin-before-receiving-or-sending",
+      "related_guide_ids": [
+        "getting-started.start-here",
+        "coinjoin.use-coinjoin"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "can-i-buy-bitcoin-in-ginger-or-receive-an-exchange-withdrawal",
+      "related_guide_ids": [
+        "payments.receive",
+        "buy-sell.buy",
+        "buy-sell.sell-and-orders"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "what-do-i-need-to-back-up",
+      "related_guide_ids": [
+        "backup-recovery.backups",
+        "backup-recovery.backup-files"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "is-my-passphrase-just-a-password-i-can-reset",
+      "related_guide_ids": [
+        "backup-recovery.backups",
+        "backup-recovery.restore"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "i-have-the-words-but-forgot-the-passphrase-can-ginger-reset-it",
+      "related_guide_ids": [
+        "backup-recovery.restore"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "can-ginger-show-my-recovery-words-again",
+      "related_guide_ids": [
+        "backup-recovery.backups"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "why-is-my-recovered-wallet-empty-or-missing-transactions",
+      "related_guide_ids": [
+        "backup-recovery.restore",
+        "backup-recovery.recovery-options"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "the-sender-says-paid-why-have-i-received-nothing",
+      "related_guide_ids": [
+        "payments.receive",
+        "buy-sell.sell-and-orders"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "will-changing-the-network-make-missing-bitcoin-appear",
+      "related_guide_ids": [
+        "settings-network.tor-sync",
+        "backup-recovery.restore"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "why-has-a-receiving-address-disappeared-does-it-expire",
+      "related_guide_ids": [
+        "payments.receive",
+        "learn-privacy.repeated-payments"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "why-are-receive-or-send-missing",
+      "related_guide_ids": [
+        "backup-recovery.restore",
+        "hardware-wallets.connect"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "i-lost-my-authenticator-or-my-2fa-code-is-rejected-what-now",
+      "related_guide_ids": [
+        "backup-recovery.two-factor-authentication",
+        "backup-recovery.restore"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "do-i-need-tor-browser-or-a-vpn-to-make-ginger-work",
+      "related_guide_ids": [
+        "settings-network.tor-sync"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "why-is-ginger-still-connecting-or-synchronizing",
+      "related_guide_ids": [
+        "settings-network.tor-sync",
+        "help.troubleshooting"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "why-did-reinstalling-not-reset-a-broken-setting",
+      "related_guide_ids": [
+        "help.troubleshooting",
+        "backup-recovery.backup-files"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "why-is-coinjoin-waiting-instead-of-starting",
+      "related_guide_ids": [
+        "coinjoin.use-coinjoin",
+        "coinjoin.round-details"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "what-is-the-minimum-amount-and-why-are-some-coins-left-behind",
+      "related_guide_ids": [
+        "coinjoin.round-details",
+        "coinjoin.settings"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "how-long-will-it-take-and-how-many-rounds-do-i-need",
+      "related_guide_ids": [
+        "coinjoin.use-coinjoin",
+        "coinjoin.fees-and-progress"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "why-did-my-balance-decrease-if-coinjoin-was-described-as-free",
+      "related_guide_ids": [
+        "coinjoin.fees-and-progress",
+        "hardware-wallets.exchange-to-cold-storage"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "what-coordinator-fee-does-ginger-currently-advertise",
+      "related_guide_ids": [
+        "coinjoin.fees-and-progress"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "can-i-stop-coinjoin-or-turn-off-the-computer",
+      "related_guide_ids": [
+        "coinjoin.use-coinjoin"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "why-is-there-a-transaction-when-i-never-pressed-send",
+      "related_guide_ids": [
+        "coinjoin.use-coinjoin",
+        "learn-self-custody.security-routine"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "can-i-spend-at-99-and-does-100-mean-i-am-anonymous",
+      "related_guide_ids": [
+        "coinjoin.fees-and-progress",
+        "learn-privacy.habits"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "why-is-the-play-control-missing-when-all-funds-are-private",
+      "related_guide_ids": [
+        "coinjoin.round-details",
+        "hardware-wallets.exchange-to-cold-storage"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "why-is-a-payment-still-pending-after-the-estimated-time",
+      "related_guide_ids": [
+        "payments.coin-control-history",
+        "payments.fees-and-change"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "can-i-cancel-a-payment-or-recover-one-sent-to-the-wrong-address",
+      "related_guide_ids": [
+        "payments.coin-control-history"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "why-are-there-insufficient-funds-when-my-balance-looks-large-enough",
+      "related_guide_ids": [
+        "payments.send",
+        "payments.fees-and-change"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "why-did-my-payment-create-another-address-or-leave-change",
+      "related_guide_ids": [
+        "payments.send",
+        "payments.fees-and-change"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "can-i-use-a-hardware-wallet-including-after-coinjoin",
+      "related_guide_ids": [
+        "hardware-wallets.connect",
+        "hardware-wallets.exchange-to-cold-storage"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "will-an-exchange-accept-my-bitcoin-after-coinjoin",
+      "related_guide_ids": [
+        "learn-coinjoin.when-to-use",
+        "buy-sell.sell-and-orders"
+      ]
+    },
+    {
+      "page_id": "help.faq",
+      "anchor": "what-can-i-share-with-support-and-where-do-i-report-a-bug",
+      "related_guide_ids": [
+        "help.troubleshooting"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "why-can-the-same-words-produce-a-different-wallet",
+      "related_guide_ids": [
+        "backup-recovery.recovery-options"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "when-should-i-increase-the-recovery-gap-limit",
+      "related_guide_ids": [
+        "backup-recovery.recovery-options"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "why-did-labels-or-privacy-information-change-after-recovery",
+      "related_guide_ids": [
+        "backup-recovery.backup-files",
+        "coinjoin.fees-and-progress"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "can-i-use-the-same-recovery-words-in-two-wallet-applications",
+      "related_guide_ids": [
+        "learn-privacy.wallet-migration"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "what-does-an-exposed-address-or-xpub-allow-someone-to-do",
+      "related_guide_ids": [
+        "learn-privacy.wallet-migration",
+        "learn-self-custody.security-routine"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "does-the-2fa-file-recover-the-wallet-without-the-service",
+      "related_guide_ids": [
+        "backup-recovery.two-factor-authentication",
+        "backup-recovery.backup-files"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "how-do-i-delete-a-local-wallet-without-confusing-deletion-with-revocation",
+      "related_guide_ids": [
+        "learn-self-custody.security-routine",
+        "backup-recovery.backup-files"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "what-is-the-difference-between-a-coin-an-address-and-a-wallet",
+      "related_guide_ids": [
+        "payments.coin-control-history"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "does-combining-coinjoined-coins-always-destroy-all-privacy",
+      "related_guide_ids": [
+        "learn-privacy.spending-after-coinjoin"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "does-a-reused-address-automatically-publish-my-entire-wallet",
+      "related_guide_ids": [
+        "payments.receive",
+        "learn-privacy.repeated-payments"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "does-manual-control-force-exactly-those-inputs-into-the-final-payment",
+      "related_guide_ids": [
+        "payments.coin-control-history"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "should-i-consolidate-many-small-coins-while-fees-are-low",
+      "related_guide_ids": [
+        "learn-privacy.spending-after-coinjoin",
+        "payments.fees-and-change"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "why-is-a-tiny-payment-missing-and-does-exclude-coins-freeze-it",
+      "related_guide_ids": [
+        "payments.receive",
+        "coinjoin.settings",
+        "learn-privacy.repeated-payments"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "can-i-set-any-custom-fee-rate-or-guarantee-a-confirmation-time",
+      "related_guide_ids": [
+        "payments.fees-and-change"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "why-can-the-private-balance-percentage-differ-from-overall-progress",
+      "related_guide_ids": [
+        "coinjoin.fees-and-progress"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "why-can-progress-fall-or-change-when-i-adjust-the-target",
+      "related_guide_ids": [
+        "coinjoin.fees-and-progress"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "can-i-choose-exactly-which-coins-join-a-round",
+      "related_guide_ids": [
+        "coinjoin.settings",
+        "coinjoin.round-details"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "what-do-rejected-coins-or-a-blame-round-mean",
+      "related_guide_ids": [
+        "coinjoin.round-details",
+        "learn-coinjoin.trust-and-limits"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "how-do-i-reconcile-the-full-cost-of-a-round",
+      "related_guide_ids": [
+        "coinjoin.fees-and-progress"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "is-a-remix-exemption-permanent-or-applied-to-my-entire-balance",
+      "related_guide_ids": [
+        "coinjoin.fees-and-progress"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "can-coinjoin-send-directly-to-my-hardware-wallet",
+      "related_guide_ids": [
+        "hardware-wallets.exchange-to-cold-storage",
+        "coinjoin.settings"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "does-an-own-node-replace-every-ginger-service-or-make-tor-unnecessary",
+      "related_guide_ids": [
+        "settings-network.full-node-fees",
+        "learn-privacy.information-sharing"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "does-payjoin-hide-my-payment-from-its-recipient",
+      "related_guide_ids": [
+        "payments.payjoin-message-signing"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "how-do-i-prove-control-of-an-address-without-paying",
+      "related_guide_ids": [
+        "payments.payjoin-message-signing"
+      ]
+    },
+    {
+      "page_id": "help.advanced-faq",
+      "anchor": "what-information-do-secret-hunt-and-buysell-services-receive",
+      "related_guide_ids": [
+        "learn-privacy.information-sharing",
+        "settings-network.secret-hunt",
+        "buy-sell.buy"
+      ]
+    }
+  ]
+}
