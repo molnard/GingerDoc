@@ -4,9 +4,12 @@ title: "Create and Open Your First Ginger Wallet"
 description: "Create a Bitcoin wallet, record its recovery words and passphrase, and understand the first synchronization and CoinJoin settings."
 lang: "en-US"
 verified_release: "v2.0.26"
+reader_level: "beginner"
 ---
 
 # Create and Open Your First Ginger Wallet
+
+> Reading level: Start here. The essential steps come first; advanced references are optional follow-up.
 
 A Ginger wallet contains the information needed to recognize and spend your bitcoin. The bitcoin itself is recorded on the Bitcoin network. Losing your computer is recoverable if you have the right backup; losing both the wallet and its recovery information may not be.
 

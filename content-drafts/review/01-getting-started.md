@@ -8,9 +8,10 @@ Complete English user-manual manuscripts, outside the live site build. Each topi
 
 ## Read the manuscripts
 
-- [Install Ginger Wallet](../en/getting-started/install.md) — `getting-started.install`
-- [Verify a Ginger Wallet Download](../en/getting-started/verify-download.md) — `getting-started.verify-download`
-- [Create and Open Your First Ginger Wallet](../en/getting-started/first-wallet.md) — `getting-started.first-wallet`
+- [Create and Open Your First Ginger Wallet](../en/getting-started/first-wallet.md) — beginner; `getting-started.first-wallet`
+- [Install Ginger Wallet](../en/getting-started/install.md) — beginner; `getting-started.install`
+- [Start Here: Your First Steps with Ginger](../en/getting-started/start-here.md) — beginner; `getting-started.start-here`
+- [Verify a Ginger Wallet Download](../en/getting-started/verify-download.md) — advanced; `getting-started.verify-download`
 
 ## Behavior evidence
 
@@ -56,3 +57,19 @@ Release assets and OS requirements come from the v2.0.26 release notes. The sign
 Keep page IDs stable. Convert frontmatter keys to the chosen engine when integrating. The only relative manuscript links point inside this topic, so merging another topic is not a prerequisite. The PR00 page registry lists the intended navigation across topics; add those links after all relevant pages have merged. Keep source notes out of public reader navigation.
 
 Before publication, review the instructions against the installed release and recheck live provider/coordinator terms. No screenshots or framework-specific components are required.
+
+## Reader-level and FAQ revision
+
+Every page now has a visible reading level and `reader_level` metadata. Beginner instructions keep recovery, recipient verification and fees in the ordinary flow; detailed reference is separate. No unrelated wallet-brand mention remains in the public manuscript. Exact code paths and original research names remain truthful editorial provenance.
+
+The new first-use page links to installation and creation, then gives a short receive/send/CoinJoin orientation. The payment and CoinJoin controls were cross-checked against the released view models used by their full task guides.
+
+### Additional released UI labels
+
+| Visible label | Released resource |
+| --- | --- |
+| Automatic | [`WalletAutomatic`](https://github.com/GingerPrivacy/GingerWallet/blob/fa27e5419da5dfa391fb1db38012c0b1141f59b3/WalletWasabi/Lang/Resources.resx#L340) |
+| Confirm | [`Confirm`](https://github.com/GingerPrivacy/GingerWallet/blob/fa27e5419da5dfa391fb1db38012c0b1141f59b3/WalletWasabi/Lang/Resources.resx#L1027) |
+| Continue | [`Continue`](https://github.com/GingerPrivacy/GingerWallet/blob/fa27e5419da5dfa391fb1db38012c0b1141f59b3/WalletWasabi/Lang/Resources.resx#L583) |
+| Receive | [`WalletReceive`](https://github.com/GingerPrivacy/GingerWallet/blob/fa27e5419da5dfa391fb1db38012c0b1141f59b3/WalletWasabi/Lang/Resources.resx#L367) |
+| Send | [`WalletSend`](https://github.com/GingerPrivacy/GingerWallet/blob/fa27e5419da5dfa391fb1db38012c0b1141f59b3/WalletWasabi/Lang/Resources.resx#L337) |

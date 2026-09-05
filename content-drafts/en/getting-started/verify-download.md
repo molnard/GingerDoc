@@ -4,9 +4,12 @@ title: "Verify a Ginger Wallet Download"
 description: "Check a Ginger Wallet release signature and signing-key fingerprint before installing the application."
 lang: "en-US"
 verified_release: "v2.0.26"
+reader_level: "advanced"
 ---
 
 # Verify a Ginger Wallet Download
+
+> Reading level: Advanced guide. Use the installation guide to identify the official download and the package for your computer.
 
 A detached signature helps establish that the file you downloaded was signed by the holder of a particular signing key and has not changed since signing. It does not prove that the software is free of bugs. You must also establish that the signing key is the one you intended to trust.
 

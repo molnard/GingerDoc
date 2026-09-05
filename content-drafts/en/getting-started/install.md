@@ -4,9 +4,12 @@ title: "Install Ginger Wallet"
 description: "Choose the right Ginger Wallet desktop download, check compatibility, and install the released application."
 lang: "en-US"
 verified_release: "v2.0.26"
+reader_level: "beginner"
 ---
 
 # Install Ginger Wallet
+
+> Reading level: Start here. The essential steps come first; advanced references are optional follow-up.
 
 Ginger Wallet is a desktop Bitcoin wallet. You hold the keys to your bitcoin and can use CoinJoin to make transaction tracing harder. It does not provide a mobile wallet, a Lightning wallet, or support for other cryptocurrencies in this release.
 
@@ -28,7 +31,7 @@ Ginger needs an internet connection and writable storage for its wallet and sync
 
 ## Install the application
 
-1. Download the package for your system and its matching `.asc` signature. Follow [Verify a download](verify-download.md) before opening the package.
+1. Download the package for your system from the official release. Check the source, version and package name, and pay attention to your operating system's signature and security checks. For independent PGP verification, use the matching `.asc` file and the separate [advanced download-verification guide](verify-download.md) before opening the package.
 2. On Windows, open the `.msi` and follow the installer. On macOS, open the `.dmg` and copy Ginger to Applications. On Ubuntu or Debian, open the `.deb` with the system's software installer. For the Linux archive, extract the complete archive and launch the included application; keep its companion files together.
 3. Open Ginger. Allow time for its first connection and synchronization. Tor is included and normally starts with the wallet.
 4. Continue with [Create and open a wallet](first-wallet.md).
