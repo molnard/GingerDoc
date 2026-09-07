@@ -1,0 +1,33 @@
+{
+  "replaces": [
+    "help"
+  ],
+  "help": [
+    {
+      "label": "Questions and troubleshooting",
+      "collapsed": false,
+      "items": [
+        {
+          "slug": "help"
+        },
+        {
+          "slug": "help/troubleshooting"
+        },
+        {
+          "slug": "help/glossary"
+        }
+      ]
+    }
+  ],
+  "advanced": [
+    {
+      "label": "Questions and troubleshooting",
+      "collapsed": true,
+      "items": [
+        {
+          "slug": "help/advanced-faq"
+        }
+      ]
+    }
+  ]
+}
