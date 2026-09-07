@@ -2,8 +2,8 @@ import { existsSync, readdirSync, readFileSync } from 'node:fs'
 
 // Each topic owns one manifest. A topic can be reviewed and merged independently.
 export function manualSidebar(root = new URL('./navigation/', import.meta.url)) {
-  const sections = ['start', 'use', 'learn', 'help', 'advanced']
-  const labels = ['Getting Started', 'Using Ginger', 'Bitcoin basics', 'Help', 'Advanced use']
+  const sections = ['start', 'help', 'use', 'learn', 'advanced']
+  const labels = ['Getting Started', 'Help', 'Using Ginger', 'Bitcoin basics', 'Advanced use']
   const topics = existsSync(root)
     ? readdirSync(root).filter((file) => file.endsWith('.json')).sort()
       .map((file) => JSON.parse(readFileSync(new URL(file, root), 'utf8')))
@@ -23,6 +23,6 @@ export function manualSidebar(root = new URL('./navigation/', import.meta.url)) 
     const fallback = legacy[section].filter((slug) => !replaced.has(slug))
       .map((slug) => ({ slug }))
     const items = [...additions, ...fallback]
-    return items.length ? [{ label: labels[index], collapsed: section === 'advanced', items }] : []
+    return items.length ? [{ label: labels[index], collapsed: !['start', 'help'].includes(section), items }] : []
   })
 }
