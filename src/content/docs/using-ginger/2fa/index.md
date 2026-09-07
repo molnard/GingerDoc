@@ -1,95 +1,64 @@
 ---
-title: "2FA"
+doc_id: "backup-recovery.two-factor-authentication"
+title: "Use Two-Factor Authentication in Ginger"
+description: "Set up Ginger two-factor authentication and understand its wallet-file encryption, Tor requirement, and recovery limits."
+lang: "en-US"
+verified_release: "v2.0.26"
+reader_level: "advanced"
+prev: false
+next: false
 ---
 
-## What is the default 2FA state of Gingerwallet?
-By default, GingerWallet operates without 2FA (Two-Factor Authentication), allowing users to use the wallet anonymously.
+<span id="what-is-the-default-2fa-state-of-gingerwallet"></span>
+<span id="how-do-i-enable-2fa-in-gingerwallet"></span>
+<span id="how-do-i-set-up-2fa-using-an-authenticator-app"></span>
+<span id="what-is-the-purpose-of-the-2fagws-file"></span>
+<span id="do-i-need-to-restart-the-application-after-enabling-2fa"></span>
+<span id="how-does-the-login-process-change-after-enabling-2fa"></span>
+<span id="how-do-i-disable-2fa"></span>
+<span id="what-should-i-do-if-i-change-devices-or-lose-data"></span>
+<span id="what-are-the-security-best-practices-for-using-gingerwallet"></span>
+<span id="does-gingerwallet-store-any-personal-information"></span>
+<span id="what-happens-if-i-lose-access-to-my-authenticator-app"></span>
+<span id="how-does-gingerwallet-ensure-security-with-2fa"></span>
+<span id="how-can-i-recover-my-labels-and-extra-options-for-my-wallet-if-ive-lost-the-2fa-key"></span>
+<span id="why-does-ginger-wallet-require-an-8-digit-2fa-code"></span>
+<span id="what-should-i-do-if-my-authenticator-app-only-provides-6-digit-codes"></span>
 
+> Reading level: Advanced guide. Keep the original recovery information and wallet files before changing the recovery or file setup.
 
-## How do i enable 2FA in Gingerwallet?
-To enable 2FA:
-- Go to Settings -> Security
-- Toggle the 2FA switch to "On"
-- A QR code will appear in a pop-up window for the next steps.
+Ginger's optional two-factor authentication (2FA) adds an application-startup check and encryption of local wallet files. It is separate from each wallet's passphrase. It is not a Bitcoin rule requiring a second signature for every spend, and it does not protect a recovery-word backup from someone who also knows its passphrase.
 
-To use 2FA features in GingerWallet, you need to enable Tor. Since GingerWallet now operates with a new working folder, it's recommended to delete the old Wasabi working folder if it's no longer in use, as the files stored there are unencrypted.
+## Understand the dependency first
 
-**Important: Delete your old working folder only if the GingerWallet folder is in the same location and your updated app is functioning properly.**
+Ginger verifies the authenticator code with its 2FA service and obtains the secret needed to decrypt the protected wallet files. A working connection to that service is therefore required for the normal 2FA startup flow. Tor must be enabled to use this feature.
 
-**To delete old working folder on different systems:**
-- Windows: /Users/{your username}/AppData/Roaming/WalletWasabi/Client
-- Linux: /home/{your username}/.walletwasabi/client
-- macOS: /Users/{your username}/.walletwasabi/client
+The local `2fa_info.gws` file stores a client/server identifier. It is not an encrypted copy of your recovery words or a self-contained recovery key. Copying only that file will not recover a wallet. Neither a wallet passphrase nor enabling 2FA means that every label, log, or sidecar file receives the same encryption. Protect the entire data folder and its backups.
 
-You cannot manually add 2FA to your auth folder using only a QR code.
+Before enabling 2FA, check that you have the recovery words and exact original passphrase for every software wallet you need to recover. Keep protected copies of wallet and metadata files as well.
 
-## How do i set up 2FA using an authenticator app?
+## Enable 2FA
 
-**Once the QR code appears:**
-- Scan it using a mobile authenticator app like Google Authenticator, 2FAS Auth, Aegis Authenticator, FreeOTP.
-- Make sure your authenticator app supports sha256 and 8 digit authentication if your are not using any from the previous examples
-- Enter the current PIN code displayed in your authenticator app into the input field below the QR code.
-- After verifying the PIN code, 2FA will be activated.
+1. Open **Settings** â†’ **Security**. Enable **Network anonymization (Tor)** if needed and restart when prompted so Tor is active.
+2. Enable **Two-factor authentication**. The setup dialog displays a QR code for an authenticator.
+3. Add that QR code to your authenticator privately. It contains a secret, so do not share it. Ginger's setup requires an authenticator compatible with SHA256 and eight-digit codes; a manually created default six-digit entry is not equivalent.
+4. Enter the current code and choose **Verify**. If verification fails, check your phone's time synchronization and that the entry came from this setup.
+5. Restart Ginger as instructed. Complete the 2FA startup prompt. On a successful authenticated startup, Ginger obtains the encryption secret and ensures that the wallet and automatic wallet-backup JSON files are encrypted.
 
+Do not assume that files copied before setup or before the authenticated restart acquired the new protection. Keep those older backups protected independently. Enabling the switch is not a reason to erase your only known-good recovery material.
 
-## What is the purpose of the 2FA.gws file?
-The **2fa_info.gws file** is an encrypted file that ensures the security of your wallet. Once 2FA is activated, this file is created on your device, and all existing and future wallets will be encrypted automatically.
+## Everyday use and disabling
 
+At startup, enter the current authenticator code. Once the application has loaded, individual wallet passphrases and hardware-device approvals still have their own roles. An already unlocked computer remains a security concern.
 
-## Do i need to restart the application after enabling 2FA?
-Yes, after activating 2FA, GingerWallet must be restarted for the changes to take effect.
+To disable 2FA while you have access, open **Settings** â†’ **Security** and switch **Two-factor authentication** off. Ginger removes the additional wallet-file encryption and its local 2FA association. Normal software-wallet passphrase protection is separate and remains relevant. Back up the resulting files if your backup procedure depends on their current encryption state.
 
+## Lost phone, missing file, or unavailable service
 
-## How does the login process change after enabling 2FA?
-**After restarting the application:**
-A pop-up window will request the current PIN code from your authenticator app at startup.
-Enter the PIN code, and upon successful verification, the system will decode and load your wallet files.
+A lost authenticator or a service outage can prevent normal startup. First preserve the existing data folder. Check time and connectivity for a rejected code; repeated installation over the same data does not recreate a lost authenticator secret.
 
+For software-wallet funds, use a separate trusted installation or clean application environment to recover from the original words and passphrase. Verify known history and access before changing the old files. Recovered keys do not depend on retaining the old 2FA setup, but downloading and synchronizing Ginger still need its normal network services. Compatible recovery software can be an option if it supports the original account types.
 
-## How do i disable 2FA?
-**To disable 2FA:**
-- Navigate to Settings -> Security
-- Toggle the 2FA switch to "Off."
-- The system will deactivate 2FA and decode all wallet files.
+Labels and other local attributes are not reconstructed from words. Preserve their `.attr` backups before investigating metadata recovery. Preserve the existing wallet data when setting up or troubleshooting 2FA.
 
-
-## What should i do if i change devices or lose data?
-**In case of a device change or data loss:**
-- Reinstall GingerWallet on the new device.
-- Restore your wallets using the securely stored seed words.
-- You will need to set up 2FA again (if desired).
-
-
-## What are the security best practices for using Gingerwallet?
-- Always store your seed words in a secure, offline location.
-- If you lose your phone or suspect unauthorized access, immediately create a new wallet.
-- Transfer your assets to the new wallet and invalidate the old wallet's seed words.
-
-
-## Does Gingerwallet store any personal information?
-No, GingerWallet operates anonymously. There is no user account or personal data storage. All security operations, including encryption, are performed locally on your device.
-
-
-## What happens if i lose access to my authenticator app?
-If you lose access to your authenticator app, you will need to restore your wallet using the seed words and set up a new 2FA process. Ensure your seed words are securely stored to avoid losing access to your funds.
-
-
-## How does Gingerwallet ensure security with 2FA?
-The combination of the encrypted **2fa_info.gws file** and the PIN code from the authenticator app ensures that your wallet remains secure. Proper storage of seed words is critical for recovering your wallet in case of device loss or reinstallation.
-
-## How can i recover my labels and extra options for my wallet if i've lost the 2fa key?
-If you've lost your 2FA key, you can still recover your labels and extra options with minimal manual work. Follow these steps:
-
-1. **Move the attr file:** First, locate the attr file and move it to a separate folder for safekeeping, as you’ll need it later.
-2. **Recover the wallet:** Use the recovery process in the application to restore your wallet.
-3. **Close the application:** Once the recovery process is complete, close the wallet application.
-4. **Copy back the attr file:** Replace the newly created attr file with the one you saved earlier by copying it back into its original location.
-5. **Restart the application:** Reopen the wallet application, and your wallet should be fully restored, even without the 2FA key.
-
-This process allows you to recover the labels, extra options, and other settings.
-
-## Why does Ginger Wallet require an 8-digit 2FA code?
-Ginger Wallet requires an 8-digit 2FA code for enhanced security. An 8-digit code is significantly harder to crack compared to shorter codes, providing better protection against unauthorized access.
-
-## What should I do if my authenticator app only provides 6-digit codes?
-If your authenticator app only provides 6-digit codes, you need to switch to an authenticator that supports 8-digit codes, as required by Ginger Wallet for security reasons.
+If recovery material was exposed, creating a new wallet and transferring remaining funds changes which keys control them. Disabling 2FA or reinstalling the application does not invalidate old recovery words.

@@ -1,0 +1,40 @@
+{
+  "replaces": [
+    "using-ginger/2fa",
+    "using-ginger/passphrase"
+  ],
+  "start": [
+    {
+      "label": "Backup and recovery",
+      "collapsed": false,
+      "items": [
+        {
+          "slug": "backup-recovery/backups"
+        },
+        {
+          "slug": "using-ginger/passphrase"
+        },
+        {
+          "slug": "backup-recovery/restore"
+        }
+      ]
+    }
+  ],
+  "advanced": [
+    {
+      "label": "Backup and recovery",
+      "collapsed": true,
+      "items": [
+        {
+          "slug": "backup-recovery/backup-files"
+        },
+        {
+          "slug": "backup-recovery/recovery-options"
+        },
+        {
+          "slug": "using-ginger/2fa"
+        }
+      ]
+    }
+  ]
+}
