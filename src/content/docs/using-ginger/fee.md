@@ -1,12 +1,36 @@
 ---
-title: "Fees"
+doc_id: "payments.fees-and-change"
+title: "Transaction Fees, Custom Rates and Change"
+description: "Understand satoshi-per-byte fee rates, manual fee entry, change outputs and amount-changing privacy suggestions in Ginger."
+lang: "en-US"
+verified_release: "v2.0.26"
+reader_level: "advanced"
+prev: false
+next: false
 ---
 
-## What is mining fee?
-In Bitcoin transactions, a mining fee is a small amount of BTC paid to miners to validate and include the transaction in the blockchain. Fees are measured in satoshis per byte (sats/byte) and depend on the transaction size and network congestion. Higher fees result in faster processing, as miners prioritize transactions with greater rewards.
+<span id="what-is-mining-fee"></span>
+<span id="what-does-the-mining-fee-depend-on"></span>
+<span id="what-is-coordinator-fee"></span>
 
-## What does the mining fee depend on?
-The mining fee in a Bitcoin transaction depends on several factors, including network congestion, transaction size, and the fee priority set by the user. When the network is busy with many pending transactions, fees increase as users compete for limited block space. Larger transactions, measured in bytes, require more computational resources, leading to higher fees. Additionally, users can set higher fees to prioritize their transaction for faster confirmation. These dynamics, combined with overall blockchain activity and miner incentives, determine the mining fee at any given time.
+> Reading level: Advanced guide. First understand the normal send preview, recipient amount and fee.
 
-## What is coordinator fee?
-A coordinator fee is a charge applied in certain privacy-focused cryptocurrency transactions, such as those conducted through CoinJoin protocols. The coordinator is the entity or service that facilitates and organizes the CoinJoin transaction, ensuring that multiple participants' inputs and outputs are combined to enhance anonymity.
+For the ordinary payment steps, start with [Send Bitcoin](/payments/send/). This reference explains the fee controls and change in more detail; it is not necessary to choose a custom rate for every payment.
+
+## Understand the fee
+
+A fee rate is measured in satoshis per virtual byte, shown as **Fee Rate (sat/vByte)**. The total mining fee is the fee rate multiplied by the transaction's virtual size. It is not a percentage of the payment amount. Spending many small coins can cost more than spending one larger coin of the same total value.
+
+Use the preview's fee control to change the desired confirmation preference or enter a **Custom Fee Rate**. An estimated time is not a guarantee: new transactions compete for space and blocks arrive at irregular intervals. The released manual-entry control rejects rates below 1 sat/vByte; node policy can require more than the editor's minimum.
+
+When automatic estimates are unavailable, Ginger can still offer manual fee entry. If you are unsure what rate is appropriate, waiting for estimates to recover is preferable to guessing a very high number. Ordinary transaction fees and CoinJoin coordinator fees are separate.
+
+## Change is still your bitcoin
+
+Bitcoin spends whole coins, also called UTXOs. If selected inputs exceed the recipient amount plus fee, the excess generally returns to a new change address in your wallet. For example, a 100,000-satoshi input funding a 60,000-satoshi payment with a 1,000-satoshi fee leaves 39,000 satoshis of change.
+
+The change address can differ from receiving addresses you have already shown someone. You do not need to copy it out or send it back manually. Change can be linked to the payment through transaction analysis, which matters when you later combine it with other funds.
+
+Ginger's privacy suggestions may offer a payment without change by adjusting coin selection or the recipient amount. Review the result carefully. A fixed invoice should not be underpaid merely to remove change.
+
+For selecting specific coins or handling a pending transaction, see [coin control and history](/payments/coin-control-history/).
