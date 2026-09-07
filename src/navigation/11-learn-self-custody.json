@@ -1,0 +1,25 @@
+{
+  "replaces": [],
+  "learn": [
+    {
+      "label": "Self-custody",
+      "collapsed": false,
+      "items": [
+        {
+          "slug": "learn-self-custody/basics"
+        }
+      ]
+    }
+  ],
+  "advanced": [
+    {
+      "label": "Self-custody",
+      "collapsed": true,
+      "items": [
+        {
+          "slug": "learn-self-custody/security-routine"
+        }
+      ]
+    }
+  ]
+}
