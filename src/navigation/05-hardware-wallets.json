@@ -1,0 +1,30 @@
+{
+  "replaces": [
+    "using-ginger/hardware-wallet"
+  ],
+  "use": [
+    {
+      "label": "Hardware wallets",
+      "collapsed": false,
+      "items": [
+        {
+          "slug": "using-ginger/hardware-wallet"
+        }
+      ]
+    }
+  ],
+  "advanced": [
+    {
+      "label": "Hardware wallets",
+      "collapsed": true,
+      "items": [
+        {
+          "slug": "hardware-wallets/exchange-to-cold-storage"
+        },
+        {
+          "slug": "hardware-wallets/psbt"
+        }
+      ]
+    }
+  ]
+}
