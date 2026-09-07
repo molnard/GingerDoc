@@ -1,0 +1,45 @@
+{
+  "replaces": [
+    "using-ginger/privacy",
+    "using-ginger/address-reuse",
+    "why-ginger",
+    "why-ginger/difference"
+  ],
+  "learn": [
+    {
+      "label": "Bitcoin privacy",
+      "collapsed": false,
+      "items": [
+        {
+          "slug": "why-ginger"
+        },
+        {
+          "slug": "using-ginger/privacy"
+        },
+        {
+          "slug": "using-ginger/address-reuse"
+        },
+        {
+          "slug": "learn-privacy/repeated-payments"
+        }
+      ]
+    }
+  ],
+  "advanced": [
+    {
+      "label": "Bitcoin privacy",
+      "collapsed": true,
+      "items": [
+        {
+          "slug": "learn-privacy/information-sharing"
+        },
+        {
+          "slug": "learn-privacy/spending-after-coinjoin"
+        },
+        {
+          "slug": "learn-privacy/wallet-migration"
+        }
+      ]
+    }
+  ]
+}

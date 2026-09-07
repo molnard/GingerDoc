@@ -6,6 +6,7 @@ import { manualSidebar } from './src/manual-sidebar.mjs'
 export default defineConfig({
   site: 'https://docs.gingerwallet.io',
   base: '/',
+  redirects: { '/why-ginger/difference': '/why-ginger/' },
 
   integrations: [
     starlight({
