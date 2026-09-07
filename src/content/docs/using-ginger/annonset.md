@@ -15,9 +15,20 @@ CoinJoin has a cost and a privacy objective. Review both before starting: a coor
 
 ## Coordinator fee versus mining fee
 
-Ginger currently advertises a 0.3% coordinator fee on new inputs larger than 0.03 BTC. Inputs of 0.03 BTC or less and qualifying remixes are advertised as exempt; the advertised exemption also covers the direct spend of CoinJoined funds through one transaction. This is an input-based policy, not a threshold on your total wallet balance. Round parameters and eligibility checks determine what the client can actually use. Recheck the [current Ginger fee explanation](https://gingerwallet.io/) before relying on these terms.
+With Ginger's current coordinator fee settings, each input of 3,000,000 satoshis (0.03 BTC) or less pays no coordinator fee. The threshold includes exactly 0.03 BTC. An input above that threshold normally pays 0.3% of its full value, not just the part above 0.03 BTC. The rate is 0.003 as a decimal, and fractional satoshis in the calculated fee are rounded down.
 
-A chargeable input of 0.04 BTC at 0.3% has a coordinator fee of 0.00012 BTC, or 12,000 satoshis, before mining fees. An eligible 0.02 BTC input under the advertised policy has no coordinator fee, but still contributes mining fees. These examples describe the arithmetic, not a quote for a particular round.
+The threshold is checked separately for each input, not against your total wallet balance or the sum of the inputs you register. Qualifying remixes can also be exempt; Ginger's advertised exemption includes the direct spend of CoinJoined funds through one transaction. These additional exemptions depend on the offered round and the input's eligibility. Recheck the [current Ginger fee explanation](https://gingerwallet.io/) before participating.
+
+For inputs without another coordinator-fee exemption:
+
+| Input value | Value in BTC | Coordinator fee |
+| --- | --- | --- |
+| 2,999,999 satoshis | 0.02999999 BTC | 0 satoshis |
+| 3,000,000 satoshis | 0.03 BTC | 0 satoshis |
+| 3,000,001 satoshis | 0.03000001 BTC | 9,000 satoshis |
+| 4,000,000 satoshis | 0.04 BTC | 12,000 satoshis |
+
+For example, the 0.04 BTC input pays 0.00012 BTC (12,000 satoshis), not 0.3% of only the 0.01 BTC above the threshold. Mining fees are additional, including for inputs whose coordinator fee is zero. These examples explain the configured calculation, not a quote for a future round.
 
 Mining fees compensate miners for transaction space. They depend on the fee rate and the transaction's inputs and outputs. A small-value coin can cost a large percentage of its value to spend. Repeated CoinJoins can each create further mining costs even if they qualify for a coordinator-fee exemption.
 

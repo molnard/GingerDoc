@@ -21,6 +21,8 @@ CoinJoin creates a Bitcoin transaction with other participants to make the relat
 
 Open a backed-up software wallet and let it synchronize. Have confirmed bitcoin available, keep the computer connected, and review the expected cost before starting. Successful rounds have mining fees and can also have a coordinator fee; repeated rounds can add costs. The optional [advanced cost reference](/using-ginger/annonset/) explains the calculation. A hardware wallet can receive and send ordinary payments, but cannot be the signing source of Ginger's automatic CoinJoin process.
 
+The coordinator fee is checked for each coin used as an input in the round. Coins worth 0.03 BTC (3,000,000 satoshis) or less pay no coordinator fee. Larger coins normally pay 0.3% of their full value, although qualifying remixes can also be exempt. Mining fees still apply, even when the coordinator fee is zero.
+
 The wallet needs confirmed, usable funds and suitable round conditions. There is no balance or waiting time that guarantees an immediate start. Read the current status before changing settings.
 
 ## Start and pause

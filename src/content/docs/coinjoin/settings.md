@@ -18,7 +18,7 @@ next: false
 | Setting | What it controls |
 | --- | --- |
 | **Automatically start coinjoin** | Starts participation when the wallet and suitable funds are available. |
-| **Stop coinjoin threshold** | Stops automatic CoinJoin when the wallet balance is below the selected BTC amount. It is a wallet-level stop rule, not the coordinator's minimum accepted input. |
+| **Stop coinjoin threshold** | Stops automatic CoinJoin when the wallet balance is below the selected BTC amount. It is a wallet-level stop rule. It does not set the coordinator's fee-exemption threshold or minimum accepted input. |
 | **Coinjoin time preference** | Compares current mining fees with the median over the selected period. It influences when to participate, not a promised completion deadline. |
 | **Ignore coinjoin time preference below** | Allows participation below this fee-rate threshold even when the time-preference comparison would otherwise wait. |
 | **Random Skip** | Selects how often suitable rounds are skipped. The choices are **Disabled**, **Rarely**, **Sometimes**, and **Often**. More skipping generally means more waiting. |
