@@ -38,7 +38,7 @@ A sale exchanges bitcoin for the payment method offered by a provider. Ginger he
 3. Choose **Continue**, filter **Offers** by payment method, and compare the provider's net payout and charges.
 4. Choose **Accept**. Complete the provider's browser steps until you receive its exact Bitcoin destination, amount, and any payment deadline.
 5. Return to Ginger's sale dialog and choose **Send**. Enter or verify the destination and exact amount supplied by the provider. Do not assume the browser automatically filled every field correctly.
-6. Review the transaction fee and recipient amount before confirming. The provider's requested amount must arrive after any fee subtraction; do not accidentally treat â€śsend allâ€ť as payment of a fixed invoice.
+6. Review the transaction fee and recipient amount before confirming. The provider's requested amount must arrive after any fee subtraction; do not accidentally treat “send all” as payment of a fixed invoice.
 7. Check the transaction history and **Previous Orders** for progress. Keep the provider order ID and transaction ID for your records.
 
 The sale dialog preserves the provider context, but does not remove your responsibility to compare the payment request with the preview. If the quote expires before you send, obtain an updated instruction from the provider rather than paying an old address speculatively.
