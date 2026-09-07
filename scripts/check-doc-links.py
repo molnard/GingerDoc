@@ -10,7 +10,11 @@ class Page(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.ids = set()
         self.links = []
-        self.feed(path.read_text(encoding="utf-8"))
+        html = path.read_text(encoding="utf-8")
+        # Common signs of UTF-8 text accidentally decoded with a Windows code page.
+        if any(marker in html for marker in ("\ufffd", "\u00e2\u20ac", "\u00e2\u2020")):
+            raise ValueError(f"Possible text encoding damage in {path}")
+        self.feed(html)
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
