@@ -1,0 +1,20 @@
+{
+  "replaces": [
+    "using-ginger/buy",
+    "using-ginger/sell"
+  ],
+  "use": [
+    {
+      "label": "Buy and sell",
+      "collapsed": false,
+      "items": [
+        {
+          "slug": "using-ginger/buy"
+        },
+        {
+          "slug": "using-ginger/sell"
+        }
+      ]
+    }
+  ]
+}

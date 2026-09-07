@@ -1,81 +1,63 @@
 ---
-title: "Bitcoin Purchase via Ginger Wallet"
-sidebar:
-  label: "Buy Bitcoin"
+doc_id: "buy-sell.buy"
+title: "Buy Bitcoin Through Ginger Wallet"
+description: "Compare provider offers in Ginger, complete a purchase in the provider browser flow, and track delivery to your wallet."
+lang: "en-US"
+verified_release: "v2.0.26"
+reader_level: "everyday"
+prev: false
+next: false
 ---
 
-## How it works
+<span id="how-it-works"></span>
+<span id="step-1-selecting-your-country"></span>
+<span id="step-2-entering-purchase-amount"></span>
+<span id="step-3-choosing-an-offer"></span>
+<span id="bitcoin-purchase-faq"></span>
+<span id="how-can-i-purchase-bitcoin-through-ginger-wallet"></span>
+<span id="do-i-need-to-select-my-country-before-purchasing-bitcoin"></span>
+<span id="how-do-i-enter-the-amount-i-want-to-purchase"></span>
+<span id="are-there-minimum-and-maximum-limits-for-purchases"></span>
+<span id="can-i-view-my-past-purchases"></span>
+<span id="what-happens-if-i-started-a-transaction-but-did-not-complete-it"></span>
+<span id="what-does-it-mean-if-a-transaction-is-on-hold"></span>
+<span id="how-do-i-choose-the-best-offer-for-my-purchase"></span>
+<span id="are-there-additional-fees-when-purchasing-bitcoin"></span>
+<span id="how-do-i-proceed-with-a-selected-offer"></span>
+<span id="can-i-change-the-browser-used-for-redirection"></span>
 
-Ginger Wallet users can purchase Bitcoin, and the Buy button is available to everyone, including hardware wallet users. The button will be visible even if the wallet is empty.
+> Reading level: Everyday use. Choose this guide when you need the task it describes.
 
-### Step 1: Selecting Your Country
+**Buy** connects you to third-party offers for purchasing bitcoin. Ginger supplies the wallet interface and a receiving address; the selected provider handles its payment, eligibility, identity checks, and delivery process. Using a non-custodial wallet does not make a provider purchase anonymous.
 
-When opening the Buy feature for the first time, you must select your country before proceeding with a Bitcoin purchase. In certain regions, such as Canada, you will also need to specify your state.
+## Request and compare offers
 
-### Step 2: Entering Purchase Amount
+1. Open the wallet that should receive the bitcoin and finish any recovery scan. Choose **Buy**. The action can be available even when the wallet has no balance, including for a hardware wallet.
+2. Select your country and, where requested, state or region. Availability is determined by the service, so use accurate information rather than assuming a country choice is only a currency preference.
+3. In **Buy Bitcoin**, enter the purchase amount in the selected currency. Check the currency symbol and the minimum or maximum shown for the actual offer.
+4. Choose **Continue** to see **Offers**. Filter by payment method if needed. Compare the estimated bitcoin received, total fiat cost, fees, provider, and payment method.
+5. Choose **Accept** for the offer you intend to use. Ginger creates an order using a receiving address from the selected wallet and opens the provider's page in the configured browser.
 
-**Next, you will need to enter the amount of Bitcoin you wish to purchase. You can also select the currency for the transaction.**
+Offers and limits are live service information, not permanent features of a release. A fixed maximum copied from an old article may no longer apply. A prominently placed offer is not a guarantee that it is best for your circumstances.
 
-- Each currency has a minimum and maximum purchase limit. For example, in USD, the maximum limit is $30,000.
+## Complete the provider steps
 
-**If you have previously made purchases, you can view your transaction history by clicking the Previous Orders button. This will display a list of past transactions along with their statuses.**
+Check that the browser page belongs to the selected provider. Read the final amount, rate, charges, delivery terms, and any identity requirements before paying. The estimate displayed in Ginger may change before an order is finalized.
 
-- Any transactions that were created but not completed can be resumed and finalized from this list.
+Ginger's offer tooltip describes its displayed fee as included in the quoted total. Check the provider's final checkout and your payment institution's terms for any other charges; do not assume the wallet can guarantee every bank or card fee.
 
-**Each transaction has a status, such as Hold.**
+The provider receives the purchase destination and order information. It may associate these with your payment instrument or identity. Even an offer labelled as not requiring document upload does not establish that the provider collects no data or can never ask for verification. Treat the actual checkout policy as authoritative for that order.
 
-- A transaction on Hold is indicated by a yellow triangle.
-Additionally, a yellow dot appears in the upper right corner of the Buy button.
-If a transaction is on Hold, the user must contact the selected third-party provider’s support team for further assistance.
+Do not send recovery words, private keys, or your wallet passphrase to complete a purchase. A provider needs a receiving address to deliver bitcoin, not access to the wallet that will receive it.
 
-### Step 3: Choosing an Offer
-**In this step, you will see a list of all available offers.**
+## Track the result
 
-- The top-right corner of the screen allows you to filter offers by payment method.
-- Your selected payment method will be set as the default but can be changed anytime.
-- The list is automatically sorted, with the most favorable offer appearing at the top and the least favorable at the bottom.
+Open **Buy** → **Previous Orders** to inspect order status. Available actions depend on the order's state. Use **Order Details** to record the provider and **Order ID** if you need help.
 
-**The fee you find under the offer is not an additional cost. It is already included in the offer.**
+A completed payment in your bank account is not the same event as Bitcoin confirmation. After the provider sends the transaction, let Ginger synchronize and check the wallet history. Verify the amount received and transaction status rather than relying solely on a browser success page.
 
-If you find an offer that suits you, click Accept to proceed with the purchase.
+If an order is on hold, expired, failed, or refunded, consult [Order status and selling](/using-ginger/sell/). Avoid starting another purchase just because a status update is slow; first establish whether the original payment was collected.
 
-- You will then be redirected to the seller’s page, where you can finalize the transaction.
+## Browser privacy
 
-**Additionally, you can configure which browser should be used for redirection under the Settings menu.**
-
-
-## Bitcoin Purchase FAQ
-
-
-### How can I purchase Bitcoin through Ginger Wallet?
-Ginger Wallet users can easily buy Bitcoin. The Buy button is accessible to everyone, including hardware wallet users, and is visible even if the wallet is empty.
-
-###  Do I need to select my country before purchasing Bitcoin?
-Yes, when using the Buy feature for the first time, you must select your country. If you are in Canada, you will also need to specify your state.
-
-###  How do I enter the amount I want to purchase?
-After selecting your country, you must enter the amount of Bitcoin you wish to purchase. You can also choose your preferred transaction currency.
-
-###  Are there minimum and maximum limits for purchases?
-Yes, each currency has specific purchase limits. For example, in USD, the maximum limit is $30,000.
-
-###  Can I view my past purchases?
-Yes, by clicking the "Previous Orders" button, you can view a list of past transactions along with their statuses.
-
-###  What happens if I started a transaction but did not complete it?
-Any incomplete transactions can be resumed and finalized from the "Previous Orders" section.
-
-###  What does it mean if a transaction is on Hold?
-A transaction on Hold is indicated by a yellow triangle, and a yellow dot will appear in the upper right corner of the Buy button. If a transaction is on Hold, users must contact the selected third-party provider’s support team for assistance.
-
-###  How do I choose the best offer for my purchase?
-After entering the purchase amount, a list of available offers will be displayed. The list is automatically sorted from the most to least favorable offer. You can filter offers by payment method in the top-right corner of the screen.
-
-###  Are there additional fees when purchasing Bitcoin?
-No, the fee displayed under each offer is already included in the total amount.
-
-###  How do I proceed with a selected offer?
-If you find a suitable offer, click "Accept." You will then be redirected to the seller’s page to complete the transaction.
-
-###  Can I change the browser used for redirection?
-Yes, you can configure your preferred browser for redirection under the Settings menu in Ginger Wallet.
+**Settings** → **General** → **Browser used by Ginger** controls how external links open. The browser has its own cookies, IP exposure, and account logins. Ginger's Tor setting does not automatically make an ordinary browser private. Tor also cannot hide identity details you submit directly to a provider.

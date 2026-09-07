@@ -1,85 +1,70 @@
 ---
-title: "Bitcoin Sell via Ginger Wallet"
-sidebar:
-  label: "Sell Bitcoin"
+doc_id: "buy-sell.sell-and-orders"
+title: "Sell Bitcoin and Resolve Provider Orders"
+description: "Complete a Ginger sell order with the provider exact amount and address, track status, and contact the right support service."
+lang: "en-US"
+verified_release: "v2.0.26"
+reader_level: "everyday"
+prev: false
+next: false
 ---
 
-## How it works
+<span id="how-it-works"></span>
+<span id="step-1-selecting-your-country"></span>
+<span id="step-2-entering-purchase-amount"></span>
+<span id="step-3-choosing-an-offer"></span>
+<span id="step-4-completing-the-transaction"></span>
+<span id="step-5-viewing-transaction-history"></span>
+<span id="bitcoin-purchase-faq"></span>
+<span id="how-can-i-sell-bitcoin-through-ginger-wallet"></span>
+<span id="do-i-need-to-select-my-country-before-selling-bitcoin"></span>
+<span id="how-do-i-enter-the-amount-i-want-to-sell"></span>
+<span id="are-there-minimum-and-maximum-limits-for-sales"></span>
+<span id="how-do-i-choose-the-best-offer-for-my-sale"></span>
+<span id="what-happens-after-i-accept-an-offer"></span>
+<span id="how-do-i-complete-the-bitcoin-sale-transaction"></span>
+<span id="can-i-view-my-past-sales"></span>
+<span id="what-does-it-mean-if-a-transaction-is-on-hold"></span>
+<span id="can-i-change-the-browser-used-for-redirection"></span>
 
-Ginger Wallet users can sell Bitcoin, and the Sell button is visible as long as there are available funds in the wallet.
+> Reading level: Everyday use. Choose this guide when you need the task it describes.
 
-### Step 1: Selecting Your Country
+A sale exchanges bitcoin for the payment method offered by a provider. Ginger helps obtain offers and prepare the on-chain payment, but the provider controls the fiat payout and order review. Read the provider's requirements before committing funds.
 
-When using the Sell feature for the first time, you must select your country before proceeding with a Bitcoin sale. Once selected, you will not need to enter it again for future transactions.
+## Create and fund a sale
 
-### Step 2: Entering Purchase Amount
+1. Open a synchronized wallet with spendable bitcoin and choose **Sell**. If the action is missing, check recovery progress and whether the wallet can send.
+2. Select your country or region when requested. Enter the amount to sell and the currency in which you want to receive payment. Check the displayed units and limits.
+3. Choose **Continue**, filter **Offers** by payment method, and compare the provider's net payout and charges.
+4. Choose **Accept**. Complete the provider's browser steps until you receive its exact Bitcoin destination, amount, and any payment deadline.
+5. Return to Ginger's sale dialog and choose **Send**. Enter or verify the destination and exact amount supplied by the provider. Do not assume the browser automatically filled every field correctly.
+6. Review the transaction fee and recipient amount before confirming. The provider's requested amount must arrive after any fee subtraction; do not accidentally treat “send all” as payment of a fixed invoice.
+7. Check the transaction history and **Previous Orders** for progress. Keep the provider order ID and transaction ID for your records.
 
-**Next, you need to enter the amount of Bitcoin you wish to sell. You can enter this amount in BTC or in a fiat currency such as USD.**
+The sale dialog preserves the provider context, but does not remove your responsibility to compare the payment request with the preview. If the quote expires before you send, obtain an updated instruction from the provider rather than paying an old address speculatively.
 
-- Each currency has minimum and maximum selling limits. Additionally, you will need to specify the currency in which you want to receive the funds.
+## Understand status
 
-### Step 3: Choosing an Offer
-**Once you proceed, you will see a list of available offers.**
+| Status in order details | What to do |
+| --- | --- |
+| **Created** | The order exists; check which provider steps remain before paying again. |
+| **Pending** | Processing is still in progress. Compare provider status and wallet history. |
+| **Your transaction is on hold. Please contact Support.** | Follow up with the selected provider using the order ID. Ginger cannot clear its review. |
+| **Expired** | Do not assume an old quote or payment address remains usable. Ask the provider if funds were already sent. |
+| **Failed** | Check whether payment or bitcoin was transferred before trying a new order. |
+| **Refunded** | Confirm the refund method, destination, and settlement with the provider. |
+| **Completed** | Verify the expected bitcoin receipt or fiat payout through the relevant wallet or payment account. |
 
-- You can filter the offers by payment method using the option in the top-right corner of the screen.
-- The list is automatically sorted from the most favorable to the least favorable offer.
-- If you find an offer that suits you, click Accept to proceed.
+Status labels reflect the provider integration's latest information and can lag behind events. A hold indicator on **Buy** or **Sell** points to an order that needs attention; it does not indicate a lost wallet key.
 
-### Step 4: Completing the Transaction
+## Which support channel to use
 
-- After accepting an offer, follow the instructions on the provider’s page.
-- At a certain point, you will receive a recipient address and the exact amount to send.
-- Return to Ginger Wallet once you have both.
-- Back in the Ginger Wallet interface, you can continue by clicking the Send button in the dialog. While you can also use the Send button on the home screen, we highly recommend using the one in the dialog, as it optimizes the sending process specifically for selling Bitcoin.
+For identity checks, payout delays, accepted payment methods, refund terms, or an order hold, contact the provider through its authenticated website. Provide the order ID and only the transaction information needed for that specific case. Keep private account details out of public GitHub issues.
 
-### Step 5: Viewing Transaction History
+For a Ginger crash, failure to open the browser, or an incorrectly displayed order, report the application version, operating system, error text, and steps through Ginger's official support links. Do not include recovery words, passphrases, 2FA secrets, wallet files, or complete logs without reviewing their contents.
 
-**By clicking the Previous Orders button, you can view a list of past transactions along with their statuses.**
+## Privacy and fees
 
-Any incomplete transactions can be resumed and finalized from this list.
+The provider can link its payment request to the identity or payment method you give it. Spending CoinJoined funds does not remove that record, and a provider can apply its own acceptance policy. Ginger cannot guarantee that every exchange will accept every transaction history.
 
-Each transaction has a status, such as Hold.
-
-- A transaction on Hold is indicated by a yellow triangle, and a yellow dot will appear in the upper right corner of the Sell button.
-- If a transaction is on Hold, users must contact the selected third-party provider’s support team for assistance.
-
-## Bitcoin Purchase FAQ
-
-
-### How can I sell Bitcoin through Ginger Wallet?
-Ginger Wallet users can easily sell Bitcoin. The Sell button is visible as long as the wallet has Bitcoin.
-
-### Do I need to select my country before selling Bitcoin?
-Yes, when using the Sell feature for the first time, you must select your country. However, after the first transaction, you will not need to enter it again.
-
-### How do I enter the amount I want to sell?
-After selecting your country, you must enter the amount of Bitcoin you wish to sell. You can also choose the currency in which you want to receive the funds.
-
-### Are there minimum and maximum limits for sales?
-Yes, each currency has specific limits for selling Bitcoin.
-
-### How do I choose the best offer for my sale?
-After entering the amount, a list of available offers will be displayed. The list is sorted from the most to least favorable offer. You can also filter offers by payment method in the top-right corner of the screen.
-
-### What happens after I accept an offer?
-After accepting an offer, you will receive an address and the exact amount to send.
-
-Once you have this information, return to Ginger Wallet to continue the transaction.
-
-### How do I complete the Bitcoin sale transaction?
-Once back in Ginger Wallet, a dialog box will appear, allowing you to continue by clicking Send.
-
-This will open the Send screen with the recipient address and amount pre-filled.
-
-While you can send the transaction manually, we recommend completing it via the dialog box for an optimized process.
-
-### Can I view my past sales?
-Yes, by clicking the Previous Orders button, you can view a list of past transactions along with their statuses.
-
-### What does it mean if a transaction is on Hold?
-A transaction on Hold is indicated by a yellow triangle, and a yellow dot will appear in the upper right corner of the Sell button.
-
-If a transaction is on Hold, users must contact the selected third-party provider’s support team for assistance.
-
-### Can I change the browser used for redirection?
-Yes, you can configure your preferred browser for redirection under the Settings menu in Ginger Wallet.
+Compare the quoted payout with the bitcoin amount, the provider's displayed fee, and the separate mining fee for your payment. Keep enough spendable value for the latter. A low wallet balance, a fee spike, or coins participating in a critical CoinJoin phase can prevent immediate payment of an otherwise valid order.
