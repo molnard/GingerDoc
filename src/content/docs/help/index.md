@@ -118,7 +118,7 @@ An exemption from the coordinator fee does not remove Bitcoin mining fees, and r
 
 ### What coordinator fee does Ginger currently advertise?
 
-Ginger advertises 0.3% on new inputs larger than 0.03 BTC, with coordinator-fee exemptions for smaller inputs and qualifying remixes. Mining fees remain separate, and the actual round determines eligibility. Recheck the [current Ginger fee explanation](https://gingerwallet.io/) before participating; this is not a quote for a future round.
+With the current settings, each input of 0.03 BTC (3,000,000 satoshis) or less pays no coordinator fee, including an input worth exactly 0.03 BTC. Above that threshold, the fee is 0.3% of the full input value unless another exemption applies, such as a qualifying remix. The threshold applies separately to each input, not to the total wallet balance. Mining fees still apply. Recheck the [current Ginger fee explanation](https://gingerwallet.io/) and the offered round before participating.
 
 ### Can I stop CoinJoin or turn off the computer?
 
