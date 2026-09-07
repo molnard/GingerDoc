@@ -39,7 +39,7 @@ Before enabling 2FA, check that you have the recovery words and exact original p
 
 ## Enable 2FA
 
-1. Open **Settings** â†’ **Security**. Enable **Network anonymization (Tor)** if needed and restart when prompted so Tor is active.
+1. Open **Settings** → **Security**. Enable **Network anonymization (Tor)** if needed and restart when prompted so Tor is active.
 2. Enable **Two-factor authentication**. The setup dialog displays a QR code for an authenticator.
 3. Add that QR code to your authenticator privately. It contains a secret, so do not share it. Ginger's setup requires an authenticator compatible with SHA256 and eight-digit codes; a manually created default six-digit entry is not equivalent.
 4. Enter the current code and choose **Verify**. If verification fails, check your phone's time synchronization and that the entry came from this setup.
@@ -51,7 +51,7 @@ Do not assume that files copied before setup or before the authenticated restart
 
 At startup, enter the current authenticator code. Once the application has loaded, individual wallet passphrases and hardware-device approvals still have their own roles. An already unlocked computer remains a security concern.
 
-To disable 2FA while you have access, open **Settings** â†’ **Security** and switch **Two-factor authentication** off. Ginger removes the additional wallet-file encryption and its local 2FA association. Normal software-wallet passphrase protection is separate and remains relevant. Back up the resulting files if your backup procedure depends on their current encryption state.
+To disable 2FA while you have access, open **Settings** → **Security** and switch **Two-factor authentication** off. Ginger removes the additional wallet-file encryption and its local 2FA association. Normal software-wallet passphrase protection is separate and remains relevant. Back up the resulting files if your backup procedure depends on their current encryption state.
 
 ## Lost phone, missing file, or unavailable service
 
