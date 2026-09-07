@@ -1,0 +1,34 @@
+{
+  "replaces": [
+    "using-ginger/coinjoin",
+    "using-ginger/annonset"
+  ],
+  "use": [
+    {
+      "label": "CoinJoin",
+      "collapsed": false,
+      "items": [
+        {
+          "slug": "using-ginger/coinjoin"
+        }
+      ]
+    }
+  ],
+  "advanced": [
+    {
+      "label": "CoinJoin",
+      "collapsed": true,
+      "items": [
+        {
+          "slug": "using-ginger/annonset"
+        },
+        {
+          "slug": "coinjoin/round-details"
+        },
+        {
+          "slug": "coinjoin/settings"
+        }
+      ]
+    }
+  ]
+}
