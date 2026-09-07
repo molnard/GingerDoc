@@ -1,0 +1,28 @@
+{
+  "replaces": [],
+  "learn": [
+    {
+      "label": "Understanding CoinJoin",
+      "collapsed": false,
+      "items": [
+        {
+          "slug": "learn-coinjoin/explained"
+        },
+        {
+          "slug": "learn-coinjoin/when-to-use"
+        }
+      ]
+    }
+  ],
+  "advanced": [
+    {
+      "label": "Understanding CoinJoin",
+      "collapsed": true,
+      "items": [
+        {
+          "slug": "learn-coinjoin/trust-and-limits"
+        }
+      ]
+    }
+  ]
+}
