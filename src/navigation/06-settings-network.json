@@ -1,0 +1,33 @@
+{
+  "replaces": [
+    "using-ginger/tor"
+  ],
+  "use": [
+    {
+      "label": "Settings and network",
+      "collapsed": false,
+      "items": [
+        {
+          "slug": "settings-network/preferences"
+        },
+        {
+          "slug": "using-ginger/tor"
+        },
+        {
+          "slug": "settings-network/secret-hunt"
+        }
+      ]
+    }
+  ],
+  "advanced": [
+    {
+      "label": "Settings and network",
+      "collapsed": true,
+      "items": [
+        {
+          "slug": "settings-network/full-node-fees"
+        }
+      ]
+    }
+  ]
+}
