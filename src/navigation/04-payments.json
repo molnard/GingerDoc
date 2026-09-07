@@ -1,12 +1,16 @@
 {
   "replaces": [
-    "using-ginger/fee"
+    "using-ginger/fee",
+    "using-ginger"
   ],
   "use": [
     {
       "label": "Payments",
       "collapsed": false,
       "items": [
+        {
+          "slug": "using-ginger"
+        },
         {
           "slug": "payments/receive"
         },
