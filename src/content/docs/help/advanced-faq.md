@@ -26,7 +26,7 @@ The original passphrase participates in deriving the keys, and another wallet ap
 
 ### When should I increase the recovery gap limit?
 
-Consider it when you have evidence of many unused addresses before a paid address, such as addresses generated in another application. **Advanced Recovery Options** â†’ **Minimum Gap Limit:** extends the scan and can increase its work and duration; v2.0.26 starts the recovery screen at 114. It does not repair wrong words, a wrong passphrase or an incompatible account.
+Consider it when you have evidence of many unused addresses before a paid address, such as addresses generated in another application. **Advanced Recovery Options** → **Minimum Gap Limit:** extends the scan and can increase its work and duration; v2.0.26 starts the recovery screen at 114. It does not repair wrong words, a wrong passphrase or an incompatible account.
 
 ### Why did labels or privacy information change after recovery?
 
@@ -46,7 +46,7 @@ Do not treat `2fa_info.gws` as an independent offline recovery key. Normal 2FA s
 
 ### How do I delete a local wallet without confusing deletion with revocation?
 
-Back up first, then use **Wallet Settings** â†’ **Tools** â†’ **Delete Wallet** and read the confirmation. Removing local data does not erase Bitcoin transactions or invalidate copies of the recovery words. If the signing keys were exposed, simply deleting the wallet does not prevent someone else from spending with them.
+Back up first, then use **Wallet Settings** → **Tools** → **Delete Wallet** and read the confirmation. Removing local data does not erase Bitcoin transactions or invalidate copies of the recovery words. If the signing keys were exposed, simply deleting the wallet does not prevent someone else from spending with them.
 
 ## Coin selection and spending
 

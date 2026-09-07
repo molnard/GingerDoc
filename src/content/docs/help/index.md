@@ -58,7 +58,7 @@ Ginger cannot reset the original passphrase and keep the same wallet keys. Check
 
 ### Can Ginger show my recovery words again?
 
-The creation flow warns that it will not show them again afterward. **Wallet Settings** â†’ **Tools** â†’ **Verify Recovery Words** checks the words you provide; it does not reveal a forgotten backup. If access remains but the backup is lost, establish and verify a new wallet backup before moving funds carefully.
+The creation flow warns that it will not show them again afterward. **Wallet Settings** → **Tools** → **Verify Recovery Words** checks the words you provide; it does not reveal a forgotten backup. If access remains but the backup is lost, establish and verify a new wallet backup before moving funds carefully.
 
 ### Why is my recovered wallet empty or missing transactions?
 
