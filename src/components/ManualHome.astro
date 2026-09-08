@@ -88,7 +88,7 @@ const withBase = (path: string) => base + path
   a:hover, button:hover { text-decoration: underline; text-underline-offset: .25em; }
   .introduction { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
   .eyebrow { display: inline-block; border: 1px solid var(--sl-color-text-accent); border-radius: 2rem; padding: .3rem 1.1rem; color: var(--sl-color-text-accent); font-size: .875rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; }
-  .manual-home h1#_top { color: var(--sl-color-white); margin-block: 1.25rem 1rem; font-size: clamp(2.5rem, 4.85vw, 4.5rem); line-height: 1.16; font-weight: 800; letter-spacing: -.035em; }
+  .manual-home h1#_top { color: var(--sl-color-white); margin-block: 1.25rem 1rem; font-size: clamp(2.5rem, 4.85vw, 4.5rem); line-height: 1.16; font-weight: 800; letter-spacing: -.02em; }
   h1 span { color: var(--sl-color-text-accent); }
   .description { max-width: 29rem; font-size: 1.5rem; line-height: 1.45; }
   .actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1.5rem 2.25rem; margin-top: 1.75rem; }
@@ -96,27 +96,27 @@ const withBase = (path: string) => base + path
   .actions .primary { color: #101216; background: #c3a373; padding: .9rem 1.75rem; border-radius: 3rem; font-weight: 500; }
   .actions .primary:hover { background: #d2b586; }
   .actions :global(svg) { font-size: 1.5rem; flex-shrink: 0; }
-  h2 { color: var(--sl-color-white); font-size: 1.75rem; font-weight: 700; letter-spacing: -.02em; line-height: 1.3; }
+  .manual-home h2 { color: var(--sl-color-white); font-size: 1.75rem; font-weight: 700; letter-spacing: -.02em; line-height: 1.3; }
   .steps-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-block: .75rem 1.25rem; }
-  .steps-heading h2 { font-size: 2rem; }
+  .manual-home .steps-heading h2 { font-size: 2rem; }
   .steps-heading p { font-size: 1rem; }
   .first-steps li { border-top: 1px solid var(--home-border); }
   .first-steps a { display: grid; grid-template-columns: 3.75rem 1fr 1.5rem; align-items: center; gap: 2.5rem; padding-block: 1.75rem; color: var(--sl-color-text); }
   .step-number { display: grid; place-items: center; width: 3.625rem; height: 3.625rem; border: 1px solid var(--sl-color-text-accent); border-radius: 50%; color: var(--sl-color-text-accent); font-size: 1.25rem; font-weight: 600; }
   .step-copy { display: grid; gap: .25rem; }
   .step-copy strong { font-size: 1.375rem; line-height: 1.45; font-weight: 600; color: var(--sl-color-white); }
-  .step-copy > span { font-size: 1rem; line-height: 1.6; }
+  .step-copy > span { font-size: 1.0625rem; line-height: 1.6; }
   .first-steps :global(svg), .guide-groups :global(svg), .find-guide :global(svg), .home-footer :global(svg) { color: var(--sl-color-text-accent); width: 1.5rem; height: 1.5rem; flex-shrink: 0; }
   .guide-groups { display: grid; grid-template-columns: 1fr 1fr; margin-top: 3.25rem; }
   .guide-groups section:first-child { padding-inline-end: 3.125rem; }
   .guide-groups section + section { border-inline-start: 1px solid var(--home-border); padding-inline-start: 3.125rem; }
   .group-heading { display: flex; gap: 1.75rem; align-items: start; margin-bottom: 1.25rem; }
   .group-heading h2 { margin-block: .375rem .5rem; }
-  .group-heading p { font-size: 1rem; line-height: 1.6; }
+  .group-heading p { font-size: 1.0625rem; line-height: 1.6; }
   .group-icon { display: grid; place-items: center; border: 1px solid var(--sl-color-text-accent); border-radius: .3rem; width: 3.25rem; height: 3.25rem; flex-shrink: 0; }
   .group-icon :global(svg) { width: 2rem; height: 2rem; }
   .guide-groups li + li { border-top: 1px solid var(--home-border); }
-  .guide-groups a { display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 3.125rem; color: var(--sl-color-white); }
+  .guide-groups a { display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 3.125rem; color: var(--sl-color-white); font-size: 1.125rem; }
   .find-guide { display: flex; align-items: center; gap: 1.75rem; margin-top: 2.4rem; border-top: 1px solid var(--home-border); padding-top: 1.75rem; }
   .search-icon { display: grid; place-items: center; width: 3.75rem; height: 3.75rem; flex-shrink: 0; border: 1px solid var(--home-border); border-radius: 50%; background: var(--sl-color-gray-6); }
   .find-guide p { font-size: .875rem; }
@@ -142,7 +142,7 @@ const withBase = (path: string) => base + path
   .manual-home h1#_top { font-size: clamp(2.4rem, 7vw, 3.75rem); }
     .description { font-size: 1.25rem; }
     .steps-heading { flex-direction: row; align-items: baseline; flex-wrap: wrap; }
-    .steps-heading h2 { font-size: 1.75rem; }
+    .manual-home .steps-heading h2 { font-size: 1.75rem; }
     .guide-groups { grid-template-columns: 1fr; gap: 2.5rem; margin-top: 2.5rem; }
     .guide-groups section:first-child { padding-inline-end: 0; }
     .guide-groups section + section { padding-inline-start: 0; border: 0; }
@@ -159,7 +159,7 @@ const withBase = (path: string) => base + path
     .first-steps a { grid-template-columns: 2.75rem 1fr 1.25rem; gap: 1rem; padding-block: 1.25rem; }
     .step-number { width: 2.75rem; height: 2.75rem; font-size: 1rem; }
     .step-copy > span { font-size: .875rem; }
-    h2 { font-size: 1.5rem; }
+    .manual-home h2 { font-size: 1.5rem; }
     .group-heading { gap: 1rem; }
     .group-heading p { font-size: .9375rem; }
   }
