@@ -38,6 +38,14 @@ Wasabi's [CoinJoin guide](https://docs.wasabiwallet.io/using-wasabi/CoinJoin.htm
 
 Ginger's practical advantage here is a shorter setup path. A supplied connection does not guarantee an immediate round: confirmed funds, acceptable fees, an available service, and enough participating inputs are still needed.
 
+## Privacy with future use in mind
+
+You may want to improve your Bitcoin privacy today and use an exchange later. In a CoinJoin, your coins share a transaction with inputs from other participants. Those connections can matter when a custodial service reviews your deposit.
+
+Ginger's coordinator screens participating inputs and excludes those that fail its risk checks. The aim is to limit exposure to flagged inputs from other participants—one potential source of additional scrutiny when you later use your bitcoin.
+
+With Wasabi, whether comparable screening is applied depends on the coordinator you choose. Each receiving service still makes its own acceptance decisions.
+
 ## Fees: compare the complete cost
 
 ### Ginger's coordinator fee
