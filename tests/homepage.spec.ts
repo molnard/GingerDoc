@@ -24,6 +24,12 @@ test('homepage and article headers keep community links accessible at narrow wid
     await expect(page.getByRole('link', { name: 'Telegram', exact: true })).toBeVisible()
     await expect(page.getByRole('button', { name: 'Search', exact: true })).toBeInViewport()
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width)
+    const controls = await page.locator('header a, header button, header select').evaluateAll((elements) => elements
+      .map((element) => element.getBoundingClientRect())
+      .filter((box) => box.width > 0 && box.height > 0)
+      .sort((a, b) => a.left - b.left)
+      .map(({ left, right }) => ({ left, right })))
+    for (let i = 1; i < controls.length; i++) expect(controls[i].left).toBeGreaterThanOrEqual(controls[i - 1].right - 1)
 
     await page.goto('/getting-started/')
     if (width < 800) await page.getByRole('button', { name: 'Menu', exact: true }).click()
