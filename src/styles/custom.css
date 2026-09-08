@@ -76,10 +76,12 @@ h1#_top {
 	width: auto;
 }
 
-/* The header nav lives alongside the logo in Starlight's `.title-wrapper`,
-   which clips overflow to protect narrow viewports. The nav is hidden below
-   50rem anyway, so let the wrapper breathe above that. */
+/* Let the desktop navigation breathe beside the logo, while preserving space
+   for search and the community links. */
 @media (min-width: 50rem) {
+	.header .header {
+		grid-template-columns: auto minmax(6rem, 1fr) auto;
+	}
 	.title-wrapper {
 		overflow: visible;
 	}

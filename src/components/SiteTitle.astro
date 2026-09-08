@@ -6,8 +6,8 @@
  * This wraps Starlight's own SiteTitle rather than replacing it, so the logo
  * keeps whatever behaviour the theme gives it across upgrades.
  *
- * The links are hidden below 50rem, which is Starlight's own header breakpoint:
- * on narrow viewports the hamburger sidebar already lists every section.
+ * Leave room for search and community links on smaller screens. The sidebar
+ * and the homepage's first steps provide navigation when these links are hidden.
  */
 import Default from '@astrojs/starlight/components/SiteTitle.astro'
 
@@ -42,19 +42,19 @@ const isActive = (href: string) => current === href || current.startsWith(href)
 		display: none;
 	}
 
-	@media (min-width: 50rem) {
+	@media (min-width: 72rem) {
 		.header-nav {
 			display: flex;
 			align-items: center;
-			gap: 1.5rem;
-			margin-inline-start: 1.5rem;
+			gap: 1.75rem;
+			margin-inline-start: 2.25rem;
 			white-space: nowrap;
 		}
 	}
 
 	.header-nav a {
 		font-size: 1rem;
-		font-weight: 800;
+		font-weight: 500;
 		color: var(--sl-color-text);
 		text-decoration: none;
 		padding-block: 0.25rem;

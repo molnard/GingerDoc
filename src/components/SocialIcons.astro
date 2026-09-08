@@ -1,0 +1,20 @@
+---
+import Default from '@astrojs/starlight/components/SocialIcons.astro'
+import { Icon } from '@astrojs/starlight/components'
+import World from '../assets/icons/world.svg'
+---
+
+<Default {...Astro.props}><slot /></Default>
+<a href="https://gingerwallet.io/" title="Ginger Wallet website" rel="me">
+  <span class="sr-only">Ginger Wallet website</span>
+  <World width="1em" height="1em" aria-hidden="true" />
+</a>
+<a href="https://t.me/GingerWallet" title="Telegram" rel="me">
+  <span class="sr-only">Telegram</span>
+  <Icon name="telegram" />
+</a>
+
+<style>
+  a { display: flex; color: var(--sl-color-text-accent); padding: .5em; margin: -.5em; }
+  a:hover { opacity: .66; }
+</style>

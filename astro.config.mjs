@@ -41,6 +41,8 @@ export default defineConfig({
         SiteTitle: './src/components/SiteTitle.astro',
         Head: './src/components/Head.astro',
         Search: './src/components/Search.astro',
+        Hero: './src/components/Hero.astro',
+        SocialIcons: './src/components/SocialIcons.astro',
       },
 
       social: [

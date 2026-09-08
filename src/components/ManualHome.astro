@@ -1,0 +1,177 @@
+---
+import { Icon } from '@astrojs/starlight/components'
+import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro'
+import Shield from '../assets/icons/shield.svg'
+
+interface Link { label: string; href: string }
+interface Props {
+  eyebrow: string
+  title: string
+  titleSecondLine: string
+  titleAccent: string
+  description: string
+  start: Link
+  faq: Link
+  stepsTitle: string
+  stepsDescription: string
+  steps: (Link & { description: string })[]
+  groups: { title: string; description: string; icon: 'book' | 'shield'; links: Link[] }[]
+  searchTitle: string
+  searchDescription: string
+  searchLabel: string
+  advanced: Link
+}
+const copy = Astro.props
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+const withBase = (path: string) => base + path
+---
+
+<div class="manual-home not-content">
+  <div class="introduction">
+    <div class="welcome">
+      <p class="eyebrow">{copy.eyebrow}</p>
+      <h1 id="_top" data-page-title>{copy.title}<br />{copy.titleSecondLine} <span>{copy.titleAccent}</span></h1>
+      <p class="description">{copy.description}</p>
+      <div class="actions">
+        <a class="primary" href={withBase(copy.start.href)}>{copy.start.label}<Icon name="right-arrow" /></a>
+        <a href={withBase(copy.faq.href)}>{copy.faq.label}<Icon name="right-arrow" /></a>
+      </div>
+    </div>
+    <section class="first-steps" aria-labelledby="first-steps-title">
+      <div class="steps-heading">
+        <h2 id="first-steps-title">{copy.stepsTitle}</h2>
+        <p>{copy.stepsDescription}</p>
+      </div>
+      <ol>
+        {copy.steps.map((step, i) => <li>
+          <a href={withBase(step.href)}>
+            <span class="step-number" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+            <span class="step-copy"><strong>{step.label}</strong><span>{step.description}</span></span>
+            <Icon name="right-arrow" />
+          </a>
+        </li>)}
+      </ol>
+    </section>
+  </div>
+  <div class="guide-groups">
+    {copy.groups.map((group, i) => <section aria-labelledby={`guide-group-${i}`}>
+      <div class="group-heading">
+        <span class="group-icon" aria-hidden="true">
+          {group.icon === 'book' ? <Icon name="open-book" /> : <Shield />}
+        </span>
+        <div><h2 id={`guide-group-${i}`}>{group.title}</h2><p>{group.description}</p></div>
+      </div>
+      <ul>{group.links.map((link) => <li>
+        <a href={withBase(link.href)}>{link.label}<Icon name="right-arrow" /></a>
+      </li>)}</ul>
+    </section>)}
+  </div>
+  <div class="find-guide">
+    <span class="search-icon" aria-hidden="true"><Icon name="magnifier" /></span>
+    <div><p class="search-title">{copy.searchTitle}</p><p>{copy.searchDescription}</p></div>
+    <button type="button" data-open-manual-search disabled aria-haspopup="dialog">{copy.searchLabel}<Icon name="right-arrow" /></button>
+  </div>
+  <div class="home-footer">
+    <div class="mobile-theme"><ThemeSelect /></div>
+    <a href={withBase(copy.advanced.href)}>{copy.advanced.label}<Icon name="right-arrow" /></a>
+  </div>
+</div>
+
+<style>
+  .manual-home { --home-border: var(--sl-color-gray-5); padding-top: 2.25rem; }
+  h1, h2, p, ol, ul { margin: 0; }
+  ol, ul { list-style: none; padding: 0; }
+  a { text-decoration: none; }
+  a, button { -webkit-tap-highlight-color: transparent; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--sl-color-text-accent); outline-offset: 5px; }
+  a:hover, button:hover, a:hover strong { color: var(--sl-color-text-accent); }
+  a:hover, button:hover { text-decoration: underline; text-underline-offset: .25em; }
+  .introduction { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
+  .eyebrow { display: inline-block; border: 1px solid var(--sl-color-text-accent); border-radius: 2rem; padding: .3rem 1.1rem; color: var(--sl-color-text-accent); font-size: .875rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; }
+  .manual-home h1 { color: var(--sl-color-white); margin-block: 1.25rem 1.5rem; font-size: clamp(2.5rem, 4.6vw, 4.25rem); line-height: 1.16; font-weight: 800; letter-spacing: -.035em; }
+  h1 span { color: var(--sl-color-text-accent); }
+  .description { max-width: 29rem; font-size: 1.5rem; line-height: 1.45; }
+  .actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1.5rem 2.25rem; margin-top: 2.25rem; }
+  .actions a { display: inline-flex; align-items: center; gap: .75rem; font-size: 1.125rem; color: var(--sl-color-text-accent); min-height: 3.75rem; }
+  .actions .primary { color: #101216; background: #c3a373; padding: .9rem 1.75rem; border-radius: 3rem; font-weight: 500; }
+  .actions .primary:hover { background: #d2b586; }
+  .actions :global(svg) { font-size: 1.5rem; flex-shrink: 0; }
+  h2 { color: var(--sl-color-white); font-size: 1.75rem; font-weight: 700; letter-spacing: -.02em; line-height: 1.3; }
+  .steps-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-block: 1rem 1.5rem; }
+  .steps-heading h2 { font-size: 2rem; }
+  .steps-heading p { font-size: 1rem; }
+  .first-steps li { border-top: 1px solid var(--home-border); }
+  .first-steps a { display: grid; grid-template-columns: 3.75rem 1fr 1.5rem; align-items: center; gap: 2.5rem; padding-block: 1.65rem; color: var(--sl-color-text); }
+  .step-number { display: grid; place-items: center; width: 3.625rem; height: 3.625rem; border: 1px solid var(--sl-color-text-accent); border-radius: 50%; color: var(--sl-color-text-accent); font-size: 1.25rem; font-weight: 600; }
+  .step-copy { display: grid; gap: .25rem; }
+  .step-copy strong { font-size: 1.375rem; line-height: 1.45; font-weight: 600; color: var(--sl-color-white); }
+  .step-copy > span { font-size: 1rem; line-height: 1.6; }
+  .first-steps :global(svg), .guide-groups :global(svg), .find-guide :global(svg), .home-footer :global(svg) { color: var(--sl-color-text-accent); width: 1.5rem; height: 1.5rem; flex-shrink: 0; }
+  .guide-groups { display: grid; grid-template-columns: 1fr 1fr; margin-top: 4rem; }
+  .guide-groups section:first-child { padding-inline-end: 3.125rem; }
+  .guide-groups section + section { border-inline-start: 1px solid var(--home-border); padding-inline-start: 3.125rem; }
+  .group-heading { display: flex; gap: 1.75rem; align-items: start; margin-bottom: 1.25rem; }
+  .group-heading h2 { margin-block: .375rem .5rem; }
+  .group-heading p { font-size: 1rem; line-height: 1.6; }
+  .group-icon { display: grid; place-items: center; border: 1px solid var(--sl-color-text-accent); border-radius: .3rem; width: 3.25rem; height: 3.25rem; flex-shrink: 0; }
+  .group-icon :global(svg) { width: 2rem; height: 2rem; }
+  .guide-groups li + li { border-top: 1px solid var(--home-border); }
+  .guide-groups a { display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 3.125rem; color: var(--sl-color-white); }
+  .find-guide { display: flex; align-items: center; gap: 1.75rem; margin-top: 2.4rem; border-top: 1px solid var(--home-border); padding-top: 1.75rem; }
+  .search-icon { display: grid; place-items: center; width: 3.75rem; height: 3.75rem; flex-shrink: 0; border: 1px solid var(--home-border); border-radius: 50%; background: var(--sl-color-gray-6); }
+  .find-guide p { font-size: .875rem; }
+  .find-guide .search-title { color: var(--sl-color-white); font-size: 1.125rem; margin-bottom: .125rem; }
+  .find-guide button, .home-footer a { display: inline-flex; align-items: center; gap: .75rem; padding-block: .625rem; text-decoration: underline; text-underline-offset: .2em; font-size: .9375rem; }
+  .find-guide button { margin-inline-start: auto; border: 0; background: none; color: var(--sl-color-text-accent); cursor: pointer; font-family: inherit; }
+  button:disabled { opacity: .5; cursor: default; }
+  .home-footer { display: flex; justify-content: flex-end; align-items: center; margin-top: 1rem; }
+  .home-footer a { color: var(--sl-color-gray-2); font-size: .875rem; }
+  .mobile-theme { display: none; }
+  @media (max-width: 75rem) {
+    .introduction { gap: 2.5rem; }
+    .steps-heading { flex-direction: column; gap: .5rem; }
+    .first-steps a { gap: 1.25rem; }
+    .step-copy strong { font-size: 1.125rem; }
+    .guide-groups section:first-child { padding-inline-end: 2rem; }
+    .guide-groups section + section { padding-inline-start: 2rem; }
+    .group-heading { gap: 1.25rem; }
+  }
+  @media (max-width: 55rem) {
+    .manual-home { padding-top: 1.5rem; }
+    .introduction { grid-template-columns: 1fr; gap: 2.75rem; }
+    .manual-home h1 { font-size: clamp(2.4rem, 7vw, 3.75rem); }
+    .description { font-size: 1.25rem; }
+    .steps-heading { flex-direction: row; align-items: baseline; flex-wrap: wrap; }
+    .steps-heading h2 { font-size: 1.75rem; }
+    .guide-groups { grid-template-columns: 1fr; gap: 2.5rem; margin-top: 2.5rem; }
+    .guide-groups section:first-child { padding-inline-end: 0; }
+    .guide-groups section + section { padding-inline-start: 0; border: 0; }
+    .find-guide { flex-wrap: wrap; gap: 1rem; }
+    .find-guide > div { flex: 1; }
+    .find-guide button { margin-inline-start: 4.75rem; }
+  }
+  @media (max-width: 49.999rem) {
+    .mobile-theme { display: block; margin-inline-end: auto; }
+  }
+  @media (max-width: 30rem) {
+    .actions { gap: .5rem 1.5rem; }
+    .actions a { font-size: 1rem; }
+    .first-steps a { grid-template-columns: 2.75rem 1fr 1.25rem; gap: 1rem; padding-block: 1.25rem; }
+    .step-number { width: 2.75rem; height: 2.75rem; font-size: 1rem; }
+    .step-copy > span { font-size: .875rem; }
+    h2 { font-size: 1.5rem; }
+    .group-heading { gap: 1rem; }
+    .group-heading p { font-size: .9375rem; }
+  }
+</style>
+
+<style is:global>
+  html:has(.manual-home) { --sl-content-width: 81rem; }
+  html:has(.manual-home):not([data-theme='light']) { --sl-color-bg: #101317; --sl-color-bg-nav: #0d1013; --sl-color-text: #bec3cd; --sl-color-text-accent: #c3a373; --sl-color-white: #f5f5f6; --sl-color-gray-5: #353b43; }
+  @media (max-width: 49.999rem) {
+    html:has(.manual-home) .header .right-group { display: flex; }
+    html:has(.manual-home) .header .right-group > :not(.social-icons) { display: none; }
+    html:has(.manual-home) .header .social-icons { gap: .75rem; }
+    html:has(.manual-home) .header .social-icons::after { display: none; }
+  }
+</style>

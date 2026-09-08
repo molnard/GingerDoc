@@ -1,33 +1,54 @@
 ---
+doc_id: manual.home
 title: GingerWallet Documentation
-description: Documentation for GingerWallet — the zero-knowledge, Bitcoin-only privacy wallet.
+description: Practical guides for your first Ginger wallet and everyday bitcoin use. Learn to back up your wallet, send and receive bitcoin, and understand privacy.
+lang: en-US
+reader_level: beginner
 template: splash
-hero:
-  tagline: Documentation for GingerWallet — the zero-knowledge, Bitcoin-only privacy wallet.
-  actions:
-    - text: Start using Ginger
-      link: /getting-started/
-      icon: right-arrow
-      variant: primary
+hero: {}
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import ManualHome from '../../components/ManualHome.astro';
 
-<CardGrid stagger>
-  <Card title="Getting Started" icon="rocket">
-    Install Ginger, create and back up your first wallet, then receive and send bitcoin.
-    [Read the guide](/getting-started/)
-  </Card>
-  <Card title="Why Ginger?" icon="approve-check">
-    Why financial privacy matters and how Ginger helps protect it.
-    [Learn why](/why-ginger/)
-  </Card>
-  <Card title="Using Ginger" icon="setting">
-    Coinjoin, 2FA, hardware wallets, fees, buying and selling.
-    [Explore the docs](/using-ginger/)
-  </Card>
-  <Card title="Privacy first" icon="seti:lock">
-    Learn how to make your public payment history harder to follow and understand the limits of privacy tools.
-    [Why privacy matters](/using-ginger/privacy/)
-  </Card>
-</CardGrid>
+<ManualHome
+  eyebrow="User manual"
+  title="Get comfortable"
+  titleSecondLine="with"
+  titleAccent="Ginger."
+  description="Practical guides for your first wallet and everyday bitcoin use."
+  start={{ label: 'Start using Ginger', href: '/getting-started/' }}
+  faq={{ label: 'Browse the FAQ', href: '/help/' }}
+  stepsTitle="Your first steps"
+  stepsDescription="A simple path to get started."
+  steps={[
+    { label: 'Install Ginger', description: 'Download the app and get it set up on your device.', href: '/getting-started/install/' },
+    { label: 'Create & back up your wallet', description: 'Set up your wallet and secure your recovery information.', href: '/getting-started/first-wallet/' },
+    { label: 'Receive your first payment', description: 'Get a bitcoin address and receive your first coins.', href: '/payments/receive/' },
+  ]}
+  groups={[
+    {
+      title: 'Everyday guides',
+      description: 'Practical how-to guides for using Ginger in daily life.',
+      icon: 'book',
+      links: [
+        { label: 'Send & receive', href: '/using-ginger/' },
+        { label: 'CoinJoin', href: '/using-ginger/coinjoin/' },
+        { label: 'Hardware wallets', href: '/using-ginger/hardware-wallet/' },
+      ],
+    },
+    {
+      title: 'Learn about privacy',
+      description: 'Understand how Ginger helps you stay private.',
+      icon: 'shield',
+      links: [
+        { label: 'Bitcoin privacy', href: '/using-ginger/privacy/' },
+        { label: 'How CoinJoin works', href: '/learn-coinjoin/explained/' },
+        { label: 'Self-custody', href: '/learn-self-custody/basics/' },
+      ],
+    },
+  ]}
+  searchTitle="Looking for something specific?"
+  searchDescription="Search the manual to find guides, settings and more."
+  searchLabel="Search the manual"
+  advanced={{ label: 'Advanced guides', href: '/help/advanced-faq/' }}
+/>

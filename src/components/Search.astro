@@ -54,14 +54,22 @@ const translations = {
       const dialog = this.querySelector('dialog')!
       const open = this.querySelector<HTMLButtonElement>('.open-search')!
       const select = this.querySelector<HTMLSelectElement>('select')!
+      let returnFocus: HTMLElement = open
       const openModal = async () => {
-        if (!dialog.open) dialog.showModal()
+        if (!dialog.open) {
+          returnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : open
+          dialog.showModal()
+        }
         document.body.setAttribute('data-search-modal-open', '')
         await this.loadSearch()
         if (dialog.open) this.querySelector<HTMLInputElement>('input')?.focus()
       }
       open.disabled = false
       open.addEventListener('click', openModal, { signal })
+      document.querySelectorAll<HTMLButtonElement>('[data-open-manual-search]').forEach((button) => {
+        button.disabled = false
+        button.addEventListener('click', openModal, { signal })
+      })
       this.querySelector('.close-search')!.addEventListener('click', () => dialog.close(), { signal })
       this.querySelector('.retry-search')?.addEventListener('click', openModal, { signal })
       select.addEventListener('change', () => this.applyScope(), { signal })
@@ -70,7 +78,10 @@ const translations = {
       }, { signal })
       dialog.addEventListener('close', () => {
         document.body.removeAttribute('data-search-modal-open')
-        open.focus()
+        // Keyboard shortcuts keep the header as their return target. A button
+        // elsewhere on the page returns focus to the control that opened search.
+        if (returnFocus.matches('button') && returnFocus.isConnected) returnFocus.focus()
+        else open.focus()
       }, { signal })
       // In a dialog, Escape closes search without Pagefind clearing the query.
       dialog.addEventListener('keydown', (event) => {
