@@ -17,9 +17,9 @@ export default defineConfig({
       lastUpdated: false,
 
       logo: {
-        src: './src/assets/logo.svg',
-        // The logo is a wordmark that reads on both themes, so it replaces the
-        // site title (the VuePress theme hid `.vp-site-name` for the same reason).
+        dark: './src/assets/logo.svg',
+        light: './src/assets/logo-light.svg',
+        // Keep the wordmark readable in both themes.
         replacesTitle: true,
       },
 
